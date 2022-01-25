@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  /* Global colours */
+  --palette-black: #000000;
+  --palette-darkPurple: #422a90;
+  --palette-mediumPurple: #5651a6;
+  --palette-lightPurple: #909fd6;
+  --palette-aquaBlue: #48bfe4;
+  --palette-lightBlue: #bbdaf6;
+  --palette-white: #ffffff;
+  --palette-red: #be3a2e;
+  /* Global fonts */
+  --fs-poppins-400: "Poppins", sans-serif;
+  --fs-josef-400: "Josefin Sans", sans-serif;
+  --fs-josef-600: "Josefin Sans", sans-serif;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100%;
+}
+
+* {
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+}
