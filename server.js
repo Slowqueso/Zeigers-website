@@ -1,5 +1,6 @@
 //Dependencies
 import express from "express";
+import path from "path";
 import mongoose from "mongoose";
 import cors from "cors";
 import router from "./Routes/index.js";
@@ -9,11 +10,19 @@ import dotenv from "dotenv";
 dotenv.config();
 
 //Initialising
+const __dirname = path.resolve();
 const port = process.env.PORT;
 const app = express();
+
+//Middlewares
 app.set("view engine", "ejs");
-// app.set("views", "./Views");
-// app.use(express.static(path.join(__dirname, "public")));
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
+
+// app.get("/", (req, res) => {
+//   console.log("lmao");
+//   res.render(path.join(__dirname, "views", "components", "login"));
+// });
 //Custom Middleware
 app.use(router);
 

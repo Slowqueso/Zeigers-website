@@ -2,7 +2,8 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import login from "../Routes/login/Login.js";
+import path from "path";
+const __dirname = path.resolve();
 
 dotenv.config();
 const router = express.Router();
@@ -11,17 +12,15 @@ const port = process.env.PORT;
 // Third Party Middlewares
 router.use(express.json());
 router.use(cors());
-
 // Custom Middlewares
 
 //DB Config
 
 //API Endpoints
 router.get("/", (req, res) => {
-  res.status(200).render("../Views/pages/index.ejs");
+  res.status(200).render(path.join(__dirname, "views", "login"));
+  console.log();
 });
-
-router.use("/login", login);
 
 //export
 export default router;
