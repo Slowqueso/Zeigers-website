@@ -17,9 +17,8 @@ router.use(cors());
 //DB Config
 
 //API Endpoints
-router.get("/", (req, res) => {
-  res.status(200).render(path.join(__dirname, "views", "login"));
-  console.log();
+router.get("/Home", (req, res) => {
+  res.status(200).render(path.join(__dirname, "views", "components", "header"));
 });
 
 //export
