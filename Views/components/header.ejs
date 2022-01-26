@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/header.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d3942c0715.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/header/header.css" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <canvas class="canvas" id="canvas"></canvas>
+      <nav></nav>
+      <div class="banner">
+        <h1 class="banner-title unselectable" id="banner-title1">Ziegers</h1>
+        <img
+          src="/Assets/svgs/Saturn.svg"
+          class="unselectable"
+          alt="saturn-svg"
+          id="saturn"
+        />
+        <img
+          src="/Assets/svgs/astronaut.svg"
+          alt="astronaut-svg"
+          id="astronaut"
+        />
+        <img src="/Assets/svgs/rope2.svg" alt="" id="rope" />
+      </div>
+      <div class="banner">
+        <img src="/Assets/svgs/Asteroid.svg" alt="asteroid-svg" id="asteroid" />
+        <h1 class="banner-title unselectable" id="banner-title2">
+          Lorem Ipsum
+        </h1>
+        <h3 class="banner-desc" id="banner-desc1">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English.
+        </h3>
+        <a href="./AboutUs">
+          <button class="button" id="banner-button">
+            Explore <i class="fas fa-chevron-right"></i>
+          </button>
+        </a>
+      </div>
+    </header>
+    <script src="/scripts/header/client.js" type="module"></script>
+  </body>
 </html>
