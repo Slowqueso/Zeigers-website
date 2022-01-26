@@ -18,8 +18,10 @@ router.use(cors());
 
 //API Endpoints
 router.get("/test", (req, res) => {
-  console.log("yes");
   res.status(200).render(path.join(__dirname, "views", "components", "header"));
+});
+router.get("/Home", (req, res) => {
+  res.status(200).render(path.join(__dirname, "views", "index"));
 });
 
 //export

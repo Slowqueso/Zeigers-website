@@ -44,12 +44,14 @@ scene.add(stars);
 camera.position.z = 15;
 const animate = function () {
   requestAnimationFrame(animate);
+  console.log("rendering started");
   renderer.render(scene, camera);
+  console.log("rendering ended");
 };
 console.log("width: " + window.innerWidth);
 console.log("height: " + window.innerHeight);
 window.addEventListener("resize", () => {
-  renderer.setSize(window.innerWidth, window.innerHeight * 2 + 100);
+  renderer.setSize(window.innerWidth, window.innerHeight + 100);
   renderer.render(scene, camera);
 });
 animate();

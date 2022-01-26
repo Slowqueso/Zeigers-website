@@ -5,17 +5,172 @@
 }
 nav {
   margin-bottom: 2rem;
+  transition: 0.3s;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  z-index: 100;
 }
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 header {
   min-height: 90vh;
+  padding-top: 6rem;
+  overflow-x: hidden !important;
 }
 
 header nav {
   height: 10vh;
   width: 100%;
+}
+header nav .nav-content {
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  overflow: hidden;
+  justify-content: space-between;
+}
+.nav-content .logo-div {
+  display: flex;
+  color: white;
+  align-items: center;
+  /* border: 1px solid blue; */
+  width: fit-content;
+}
+.nav-content .logo-div .logo {
+  /* border: 1px solid white; */
+  transform: translateX(1rem) translateY(0.5rem);
+  height: 65px;
+  width: 65px;
+}
+.nav-content a {
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+  color: #ffffff;
+}
+.nav-content a:hover,
+.nav-icon:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+header nav .nav-content .nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+.nav-links a {
+  width: fit-content;
+}
+@media (max-width: 768px) {
+  .show {
+    background-color: #000000;
+  }
+  nav {
+    margin-bottom: 0px;
+    position: sticky;
+  }
+  header {
+    padding-top: 0px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 75px;
+    right: 0;
+    padding-right: 15px;
+    line-height: 45px;
+    height: 0;
+    width: 100% !important;
+
+    background: #333333;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    transition: height 2s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.3s;
+  }
+
+  .show .nav-links {
+    height: 100%;
+    background-color: #000000;
+  }
+
+  .nav-links a {
+    height: 0;
+    /* width: 0; */
+    opacity: 0;
+    overflow: hidden;
+    margin: 1rem 50px;
+    transition: opacity 1.5s, height 2s;
+  }
+
+  .show .nav-links a {
+    opacity: 1;
+    width: auto;
+    height: auto;
+  }
+
+  .nav-icon {
+    display: grid !important;
+    order: 1;
+    grid-gap: 5px;
+    grid-template-columns: auto;
+    /* border: 1px solid white; */
+    margin-right: 2rem;
+    padding: 28px 0;
+    height: 10px;
+    cursor: pointer;
+  }
+
+  /* .logo {
+    order: 2;
+  } */
+
+  .logo-remaining {
+    display: none;
+  }
+}
+.nav-icon {
+  display: none;
+  width: fit-content;
+  transition: all 0.3s;
+}
+/* Pasting from here */
+.show .one {
+  transform: rotate(45deg) translateY(3.5px);
+}
+
+.show .two {
+  transform: rotate(-45deg) translateY(-5.5px);
+}
+
+.show .three {
+  display: none;
+}
+.bar {
+  height: 1px;
+  width: 18px;
+  background: white;
+  transition: 0.5s;
+}
+
+header .navbar ul li {
+  color: white;
+}
+.navbar .logo {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+.navbar .logo .image-wannabe {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid red;
+  height: 65px;
+  width: 65px;
 }
 .banner {
   position: relative;
@@ -44,16 +199,17 @@ header nav {
   width: 160px;
   position: fixed;
   top: 50%;
-  left: 65%;
+  left: 63%;
   animation: antiGravity 7s infinite;
 }
 .banner img#rope {
   z-index: 3;
-  height: 100%;
+  height: 80%;
   width: 100%;
   /* top: 50%; */
-  top: -50%;
+  top: -30%;
   left: 20%;
+  /* border: 1px solid green; */
 
   transform: rotateX(180deg) rotateZ(0deg);
   /* left: 68%; */
@@ -75,7 +231,7 @@ header nav {
   position: relative;
   top: -25%;
   margin-left: 10rem;
-  font-size: 225px;
+  font-size: 1000%;
 }
 
 .banner-desc {
@@ -92,7 +248,7 @@ header nav {
 .banner button#banner-button {
   position: absolute;
   left: 75%;
-  bottom: 10%;
+  bottom: 30%;
 }
 
 @keyframes antiGravity {
@@ -110,8 +266,19 @@ header nav {
   body {
     overflow-x: hidden;
   }
+  header {
+    max-height: 200vh;
+    overflow: hidden;
+  }
+  .banner {
+    padding: 2rem;
+  }
   .banner-title {
     font-size: 120px;
+  }
+  #banner-title1 {
+    position: relative;
+    top: 20%;
   }
   .banner img#astronaut {
     display: none;
@@ -125,5 +292,84 @@ header nav {
   }
   .banner #banner-title2 {
     font-size: 110px;
+    margin-left: 10rem;
+    width: 75%;
   }
+  .banner-desc {
+    font-size: 16px;
+  }
+  .banner button#banner-button {
+    bottom: 40%;
+  }
+  #canvas {
+    height: 190vh !important;
+  }
+}
+nav.scrolled {
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0 5px 5px -5px #333;
+}
+@media only screen and (max-width: 400px) {
+  nav {
+    margin-bottom: 0px;
+    position: sticky;
+  }
+  .banner {
+    padding: 2rem;
+    height: 100vh;
+  }
+  .header {
+    padding-top: 0px;
+    max-height: 100vh !important;
+    overflow: hidden;
+  }
+  #banner-2 {
+    height: 50vh;
+  }
+  #canvas {
+    max-height: 160vh !important;
+  }
+  .banner-title {
+    font-size: 68px;
+  }
+  .banner img#saturn {
+    height: 634px;
+    width: 634px;
+    left: 66px;
+    top: 6%;
+  }
+  .banner img#asteroid {
+    height: 368px;
+    width: 368px;
+    top: -25%;
+    left: -25%;
+  }
+  #banner-title2 {
+    font-size: 68px !important;
+    margin-left: 30% !important;
+  }
+  .banner-desc {
+    width: 90%;
+    left: 10%;
+  }
+  #banner-button {
+    bottom: 10% !important;
+    left: 50% !important;
+  }
+}
+
+.float-container {
+  border: 1px solid white;
+  height: 10cm;
+  width: 10cm;
+  display: flex;
+  align-items: center;
+  background-image: url("/Assets/svgs/Planet-shaded.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.float-container .floating-title {
+  color: white;
+  text-align: center;
 }
