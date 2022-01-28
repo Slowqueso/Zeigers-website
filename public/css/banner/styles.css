@@ -1,0 +1,99 @@
+@import url("/css/global.css");
+
+#gaming {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow-x: hidden;
+}
+#gaming img {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  z-index: 10;
+}
+
+#gaming #joystick {
+  height: 800px;
+  width: auto;
+  /* transform: translateY(-35%); */
+  /* right: -10%; */
+  left: 80%;
+}
+#gaming #console {
+  /* border: 1px solid white; */
+  left: -10%;
+  height: 600px;
+  /* transform: translateY(-20%); */
+}
+#gaming div {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+  justify-content: flex-end;
+  align-items: center;
+}
+#gaming div .banner-desc {
+  left: 0px;
+  margin-bottom: 5rem;
+}
+#gaming div .button {
+  margin: auto;
+  position: relative;
+}
+@media (max-width: 820px) {
+  #gaming {
+    min-height: 80vh !important;
+    align-items: center !important;
+    overflow-x: hidden;
+  }
+  #gaming #joystick {
+    height: 400px;
+    width: auto;
+    transform: translateY(-10%);
+    right: 0;
+    z-index: 1;
+  }
+  #gaming #console {
+    /* border: 1px solid white; */
+    left: -10%;
+    height: 300px;
+    /* transform: translateY(-20%); */
+    z-index: 1;
+  }
+  #gaming .banner-desc {
+    z-index: 2;
+  }
+}
+@media (max-width: 400px) {
+  #gaming {
+    min-height: 100vh !important;
+    align-items: center !important;
+    overflow-x: hidden !important;
+  }
+  #gaming #joystick {
+    height: 200px;
+    width: auto;
+    transform: translateY(-100%);
+    right: 0;
+    z-index: 1;
+  }
+  #gaming .banner-desc {
+    z-index: 2;
+  }
+  #gaming #console {
+    /* border: 1px solid white; */
+    left: -10%;
+    height: 300px;
+    /* transform: translateY(-20%); */
+    z-index: 1;
+  }
+  #gaming .button {
+    left: 0 !important;
+    margin: auto;
+  }
+}

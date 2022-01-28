@@ -1,5 +1,11 @@
 import * as THREE from "../../js/build/three.module.js";
 
+document.querySelector("body").addEventListener("load", () => {
+  var scale = "scale(1)";
+  document.body.style.webkitTransform = scale; // Chrome, Opera, Safari
+  document.body.style.msTransform = scale; // IE 9
+  document.body.style.transform = scale; // General
+});
 //Scene setup
 const scene = new THREE.Scene();
 const canvas = document.querySelector("canvas");
@@ -17,7 +23,7 @@ const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector("canvas"),
 });
 renderer.setSize(window.innerWidth, window.innerHeight * 2 + 100);
-console.log(window.innerWidth / 10);
+// console.log(window.innerWidth / 10);
 document.body.appendChild(renderer.domElement);
 
 // Geoemtry Render
@@ -46,13 +52,14 @@ const animate = function () {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
 };
-console.log("width: " + window.innerWidth);
-console.log("height: " + window.innerHeight);
+renderer.render(scene, camera);
+// console.log("width: " + window.innerWidth);
+// console.log("height: " + window.innerHeight);
 window.addEventListener("resize", () => {
   renderer.setSize(window.innerWidth, window.innerHeight * 2 + 100);
   renderer.render(scene, camera);
 });
-animate();
+// animate();
 
 const navIcon = document.querySelector(".nav-icon");
 const nav = document.querySelector("nav");
@@ -60,7 +67,6 @@ const nav = document.querySelector("nav");
 navIcon.onclick = function () {
   nav.classList.toggle("show");
 };
-var navbar = document.querySelector("nav");
 
 window.onscroll = function () {
   // pageYOffset or scrollY
@@ -70,3 +76,51 @@ window.onscroll = function () {
     navbar.classList.remove("scrolled");
   }
 };
+var navbar = document.querySelector("nav");
+
+const saturn = document.querySelector("#saturn");
+const title1 = document.querySelector("#banner-title1");
+const asteroid = document.getElementById("asteroid");
+const banner2 = document.getElementById("banner-2");
+const title2 = document.getElementById("banner-title2");
+const desc1 = document.getElementById("banner-desc1");
+
+if (window.innerWidth > 830) {
+  document.querySelector("header").style.overflowY = "hidden";
+} else if (window.innerWidth < 830) {
+  document.querySelector("header").style.overflowY = "hidden";
+}
+
+window.addEventListener("scroll", (e) => {
+  let value = window.scrollY;
+  // console.log(value);
+  if (window.innerWidth > 830) {
+    saturn.style.left = `calc(45% + ${value * 0.5}px)`;
+    title1.style.margin = `${value * 0.25}px 0px 0px ${0 - value / 8}rem`;
+    asteroid.style.transform = `translateX(${-value * 0.5}px)  rotateZ(${
+      (0 - value) / 15
+    }deg)`;
+    if (value >= 200) {
+      title2.style.transform = `translateX(${value / 12}px)`;
+    }
+  } else if (window.innerWidth < 830 && window.innerWidth > 400) {
+    saturn.style.left = `calc(45% + ${value * 0.5}px)`;
+    title1.style.margin = `${value * 0.25}px 0px 0px ${0 - value / 8}rem`;
+    asteroid.style.transform = `translateX(${-value * 0.5}px)  rotateZ(${
+      (0 - value) / 15
+    }deg)`;
+    if (value >= 200) {
+      title2.style.transform = `translateX(${value / 12}px)`;
+    }
+  } else {
+    saturn.style.left = `calc(66px + ${value * 5}px)`;
+    title1.style.margin = `${value * 0.75}px 0px 0px ${0 - value / 12}rem`;
+    asteroid.style.transform = `translateX(${-value / 5}px)  rotateZ(${
+      (0 - value) / 10
+    }deg)`;
+    if (value > 80) {
+      title2.style.left = `${value / 20}%`;
+      desc1.style.left = `${value / 20}%`;
+    }
+  }
+});

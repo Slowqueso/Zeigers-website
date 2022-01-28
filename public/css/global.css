@@ -32,9 +32,11 @@ body {
 }
 
 * {
+  /* border: 1px solid red; */
   margin: 0px;
   width: 100%;
   padding: 0px;
+  /* overflow-x: hidden; */
 }
 a {
   text-decoration: none;
@@ -51,6 +53,12 @@ a {
   -ms-user-select: none;
   user-select: none;
 }
+::-webkit-scrollbar {
+  width: 0px;
+}
+section {
+  overflow-x: hidden !important;
+}
 .button {
   width: auto;
   border-radius: 30px;
@@ -64,7 +72,7 @@ a {
 }
 .button:hover {
   cursor: pointer;
-  background-color: var(--palette-aquaBlue);
+  background-color: var(--palette-mediumPurple);
   color: white;
 }
 .button i {

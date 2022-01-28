@@ -1,0 +1,182 @@
+<section class="sponsors" style="background-color: white">
+  <div class="sponsors-title">Sponsors</div>
+  <div class="container-sponsors" id="cardContainer"></div>
+</section>
+<section
+  style="
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+  "
+  id="modalContainer"
+>
+  <div class="model">
+    <div class="modelVector">
+      <img src="/Assets/images/modelVector.png" alt="" />
+      <div class="logo_title_description">
+        <div class="logo_title">
+          <div class="zieger_logo">
+            <img
+              src="/Assets/images/Ziegers Logo - 20-01-2022 - modified (1).png"
+              alt=""
+            />
+          </div>
+          <div class="model_title">Lorem Ipsum</div>
+        </div>
+        <div class="model_description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            dolorem repellendus totam ipsam! Ex
+          </p>
+        </div>
+      </div>
+      <div class="location">
+        <div class="location_title">Location</div>
+        <div class="location_icon_and_address">
+          <div class="location_address">
+            244, X,n S R Road, Nsr Road, Saibabacolony
+          </div>
+          <div class="location_icon">
+            <div class="location_icon_container"></div>
+            <div class="location_icon_image">
+              <img src="/Assets/images/location_icon.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact">
+        <div class="contact_title">Contact</div>
+        <div class="phone_and_email">
+          <div class="phone">
+            <div class="phone_number">1234567890</div>
+            <div class="phone_icon">
+              <div class="phone_icon_container">
+                <img src="/Assets/images/phone_icon.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="email">
+            <div class="email_id">abc@gmail.com</div>
+            <div class="email_icon">
+              <div class="email_icon_container">
+                <img src="/Assets/images/email_icon.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="visit">
+        <div class="visit_title">Visit</div>
+        <div class="visit_link">www.abc.com</div>
+      </div>
+      <div class="social_media_handles">
+        <div class="instagram_icon">
+          <img src="/Assets/images/instagram_icon.png" alt="" />
+        </div>
+        <div class="facebook_icon">
+          <img src="/Assets/images/facebook_icon.png" alt="" />
+        </div>
+        <div class="twitter_icon">
+          <img src="/Assets/images/twitter_icon.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="close_icon">
+      <div class="close_icon_image">
+        <img src="/Assets/images/close_icon.png" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+<script
+  src="https://kit.fontawesome.com/9ccee0d88d.js"
+  crossorigin="anonymous"
+></script>
+<script>
+  const displayModal = (id) => {
+    modalContainer.style.display = "flex";
+    modalContainer.innerHTML = `  <div class="model">
+    <div class="modelVector">
+      <img src="/Assets/images/modelVector.png" alt="" />
+      <div class="logo_title_description">
+        <div class="logo_title">
+          <div class="zieger_logo">
+            <img
+              src="${sponsors[id].logo}"
+              alt=""
+            />
+          </div>
+          <div class="model_title">${sponsors[id].id}</div>
+        </div>
+        <div class="model_description">
+          <p>
+            ${sponsors[id].desc}
+          </p>
+        </div>
+      </div>
+      <div class="location">
+        <div class="location_title">Location</div>
+        <div class="location_icon_and_address">
+          <div class="location_address">
+            ${sponsors[id].address}
+          </div>
+          <div class="location_icon">
+            <div class="location_icon_container"></div>
+            <div class="location_icon_image">
+              <img src="/Assets/images/location_icon.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact">
+        <div class="contact_title">Contact</div>
+        <div class="phone_and_email">
+          <div class="phone">
+            <div class="phone_number">${sponsors[id].contact}</div>
+            <div class="phone_icon">
+              <div class="phone_icon_container">
+                <img src="/Assets/images/phone_icon.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="email">
+            <div class="email_id">${sponsors[id].email}</div>
+            <div class="email_icon">
+              <div class="email_icon_container">
+                <img src="/Assets/images/email_icon.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="visit">
+        <div class="visit_title">Visit</div>
+        <div class="visit_link">${sponsors[id].webLink}</div>
+      </div>
+      <div class="social_media_handles">
+        <div class="instagram_icon">
+          <img src="/Assets/images/instagram_icon.png" alt="" />
+        </div>
+        <div class="facebook_icon">
+          <img src="/Assets/images/facebook_icon.png" alt="" />
+        </div>
+        <div class="twitter_icon">
+          <img src="/Assets/images/twitter_icon.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="close_icon">
+      <div class="close_icon_image">
+        <img src="/Assets/images/close_icon.png" alt="" />
+      </div>
+    </div>
+  </div>`;
+  };
+</script>
+<script type="module" src="/scripts/sponsors/client.js"></script>

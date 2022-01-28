@@ -154,14 +154,14 @@
 }
 
 .tech_event_title {
-  padding: 5% 5% 0% 5%;
+  padding: 5% 5% 5% 5%;
   color: var(--palette-black);
   font-family: var(--fs-poppins-600);
   font-weight: bolder;
   font-size: 42px;
   opacity: 1;
   display: flex;
-  height: 25vh;
+  /* height: 25vh; */
   align-items: center;
   justify-content: left;
   flex-wrap: wrap;
@@ -177,12 +177,13 @@
 }
 @media only screen and (max-width: 932px) {
   section {
-    height: 100vh;
+    /* min-height: 40vh;
+    max-height: 100vh; */
     padding-bottom: 2rem;
   }
   .wrapper_cards {
     display: flex;
-    height: 75vh;
+    /* height: 75vh; */
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;

@@ -18,6 +18,9 @@ header {
   min-height: 90vh;
   padding-top: 6rem;
   overflow-x: hidden !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header nav {
@@ -64,7 +67,7 @@ header nav .nav-content .nav-links {
 .nav-links a {
   width: fit-content;
 }
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .show {
     background-color: #000000;
   }
@@ -262,7 +265,7 @@ header .navbar ul li {
     transform: rotateZ(-45deg);
   }
 }
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 830px) and (max-height: 1200px) {
   body {
     overflow-x: hidden;
   }
@@ -272,9 +275,13 @@ header .navbar ul li {
   }
   .banner {
     padding: 2rem;
+    height: 67vh !important;
   }
   .banner-title {
     font-size: 120px;
+  }
+  #banner-2 {
+    height: 40vh !important;
   }
   #banner-title1 {
     position: relative;
@@ -291,7 +298,7 @@ header .navbar ul li {
     height: 80%;
   }
   .banner #banner-title2 {
-    font-size: 110px;
+    font-size: 98px;
     margin-left: 10rem;
     width: 75%;
   }
@@ -304,13 +311,16 @@ header .navbar ul li {
   #canvas {
     height: 190vh !important;
   }
+  #banner-2 {
+    height: 75vh;
+  }
 }
 nav.scrolled {
   backdrop-filter: blur(6px);
-
+  background-color: rgba(0, 0, 0, 0.6);
   box-shadow: 0 5px 5px -5px #333;
 }
-@media only screen and (max-width: 400px) {
+@media (max-height: 740px) and (max-width: 400px) {
   nav {
     margin-bottom: 0px;
     position: sticky;
@@ -325,7 +335,7 @@ nav.scrolled {
     overflow: hidden;
   }
   #banner-2 {
-    height: 50vh;
+    height: 80vh !important;
   }
   #canvas {
     max-height: 160vh !important;
@@ -346,8 +356,58 @@ nav.scrolled {
     left: -25%;
   }
   #banner-title2 {
-    font-size: 68px !important;
-    margin-left: 30% !important;
+    font-size: 48px !important;
+    width: 90% !important;
+    margin-left: 20% !important;
+  }
+  .banner-desc {
+    width: 90%;
+    left: 10%;
+  }
+  #banner-button {
+    bottom: 10% !important;
+    left: 50% !important;
+  }
+}
+@media only screen and (max-width: 400px) and (max-height: 900px) {
+  nav {
+    margin-bottom: 0px;
+    position: sticky;
+  }
+  .banner {
+    padding: 2rem;
+    height: 100vh !important;
+  }
+  .header {
+    padding-top: 0px;
+    max-height: 100vh !important;
+    overflow: hidden;
+  }
+  #banner-2 {
+    height: 50vh !important;
+  }
+  #canvas {
+    max-height: 160vh !important;
+  }
+  .banner-title {
+    font-size: 68px;
+  }
+  .banner img#saturn {
+    height: 634px;
+    width: 634px;
+    left: 66px;
+    top: 6%;
+  }
+  .banner img#asteroid {
+    height: 368px;
+    width: 368px;
+    top: -25%;
+    left: -25%;
+  }
+  #banner-title2 {
+    font-size: 48px !important;
+    width: 90% !important;
+    margin-left: 20% !important;
   }
   .banner-desc {
     width: 90%;

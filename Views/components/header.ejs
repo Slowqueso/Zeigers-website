@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/d3942c0715.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="/css/header/header.css" />
+
     <title>Document</title>
   </head>
   <body>
+    <canvas
+      class="canvas"
+      style="width: 100%; height: 100%; position: fixed"
+      id="canvas"
+    ></canvas>
     <header>
-      <canvas class="canvas" id="canvas"></canvas>
       <nav>
         <div class="nav-content">
           <div class="logo-div">
@@ -34,12 +34,12 @@
           </div>
 
           <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">AboutUs</a>
-            <a href="#">Riddler</a>
-            <a href="#">TechEvents</a>
-            <a href="#">Gaming</a>
-            <a href="#">Login</a>
+            <a href="./Home">Home</a>
+            <a href="./AboutUs">AboutUs</a>
+            <a href="./Riddler">Riddler</a>
+            <a href="#tech-cards">TechEvents</a>
+            <a href="#gaming">Gaming</a>
+            <a href="./Login">Login</a>
           </div>
         </div>
       </nav>
@@ -61,7 +61,7 @@
       <div class="banner" id="banner-2">
         <img src="/Assets/svgs/Asteroid.svg" alt="asteroid-svg" id="asteroid" />
         <h1 class="banner-title unselectable" id="banner-title2">
-          Lorem Ipsum
+          This Year . . .
         </h1>
         <h3 class="banner-desc" id="banner-desc1">
           It is a long established fact that a reader will be distracted by the

@@ -1,0 +1,217 @@
+#footer,
+#footer-2 {
+  background-color: black;
+  padding: 30px 0 0 0;
+  /* min-width: 100%; */
+}
+#footer-2 {
+  display: none;
+}
+
+#footer .container-1,
+#footer-2 .container-1 {
+  margin: auto;
+  max-width: 100%;
+  /* background-color: red; */
+}
+
+#footer .container-1 .row,
+#footer .container-1 .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.footer-col {
+  width: 33%;
+  padding: 30px 0 30px 150px;
+}
+
+/* .footer-col:nth-child(2){
+    padding-left:150px;
+} */
+/*
+.footer-col:nth-child(3){
+    margin-left:50px;
+} */
+
+.footer-col h3 {
+  font-weight: bold;
+  font-size: 32px;
+  background: -webkit-linear-gradient(rgb(240, 84, 84), #333);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #ffffff;
+  display: block;
+}
+
+.logo img {
+  width: 200px;
+  height: 200px;
+  margin-left: 10px;
+}
+
+.logo .social_nedia_icons {
+  padding-left: 30px;
+}
+
+.logo .social_nedia_icons a {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  border-radius: 50%;
+  margin: 0 0px 10px 0;
+}
+
+.logo .social_nedia_icons a i {
+  padding-top: 12px;
+  font-size: 27px;
+}
+
+.footer-col .contactDetails_container .contactdetail {
+  margin-top: 30px;
+}
+
+.footer-col .contactDetails_container .contactdetail .contact_name {
+  padding-bottom: 10px;
+}
+
+.footer-col .contactDetails_container .contactdetail .contact_number,
+.contact_email {
+  color: rgba(255, 255, 255, 0.38);
+  display: flex;
+  justify-content: space-around;
+  width: fit-content;
+  align-items: center;
+  /* margin: auto; */
+}
+.footer-col .contactDetails_container .contactdetail .contact_number span,
+.contact_email span {
+  margin: 0px 5px;
+}
+
+#footer .copyright_container,
+#footer-2 .copyright_container {
+  border-top: 1px solid var(--palette-white);
+  color: var(--palette-white);
+  justify-content: center;
+  padding: 1rem 0px;
+}
+#footer .copyright_container p,
+#footer-2 .copyright_container {
+  width: 100%;
+  text-align: center;
+}
+
+/* #footer .copyright_container p {
+  margin: 10px 0 0 70px;
+} */
+
+/* Footer responsive */
+
+@media only screen and (max-width: 1100px) {
+  .footer-col {
+    padding-left: 90px;
+  }
+}
+
+/* @media only screen and (max-width: 930px){
+    .footer-col {
+        padding-left: 100px;
+    }
+} */
+
+@media only screen and (max-width: 870px) {
+  .footer-col {
+    padding-left: 40px;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .footer-col:nth-child(2) {
+    padding-left: 10px;
+  }
+
+  .logo img {
+    width: 190px;
+    height: 170px;
+    padding-left: 10px;
+  }
+
+  .footer-col h3 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #footer .container-1 .row {
+    flex-direction: column-reverse;
+  }
+  .sponsors_container {
+    padding-left: 0px !important;
+  }
+
+  .footer-col {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 190px;
+    height: 170px;
+    margin: 0px 0px 0px 0px;
+    padding-left: 0px !important;
+  }
+
+  .footer-col:nth-child(2) {
+    padding: 0;
+  }
+
+  .footer-col h3 {
+    font-size: 40px;
+  }
+  .logo .social_nedia_icons {
+    padding: 0px 5px 0px 5px !important;
+  }
+
+  .logo {
+    padding: 0px 0px 0px 0px !important;
+  }
+  .footer-col .contactDetails_container .contactdetail .contact_number,
+  .contact_email {
+    color: rgba(255, 255, 255, 0.38);
+    display: flex;
+    justify-content: space-around;
+    width: fit-content;
+    align-items: center;
+    margin: auto;
+  }
+  #footer {
+    display: none;
+  }
+  #footer-2 {
+    display: block;
+  }
+}
