@@ -23,6 +23,12 @@ router.get("/test", (req, res) => {
 router.get("/Home", (req, res) => {
   res.status(200).render(path.join(__dirname, "views", "index"));
 });
+router.get("/Login", (req, res) => {
+  res.status(200).render(path.join(__dirname, "views", "login"));
+});
+router.get("/SignUp", (req, res) => {
+  res.status(200).render(path.join(__dirname, "views", "signup"));
+});
 
 //export
 export default router;

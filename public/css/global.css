@@ -29,6 +29,7 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   width: 100%;
+  cursor: url("/Assets/svgs/cursor.cur"), auto;
 }
 
 * {

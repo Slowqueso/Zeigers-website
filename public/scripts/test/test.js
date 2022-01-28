@@ -16,7 +16,7 @@ const renderer = new THREE.WebGLRenderer({
   antialias: true,
   canvas: document.querySelector("canvas"),
 });
-renderer.setSize(window.innerWidth, window.innerHeight * 2 + 100);
+renderer.setSize(window.innerWidth, window.innerHeight + 100);
 console.log(window.innerWidth / 10);
 document.body.appendChild(renderer.domElement);
 
@@ -44,17 +44,14 @@ scene.add(stars);
 camera.position.z = 15;
 const animate = function () {
   requestAnimationFrame(animate);
-  console.log("rendering started");
-  renderer.render(scene, camera);
-  console.log("rendering ended");
 };
+renderer.render(scene, camera);
 console.log("width: " + window.innerWidth);
 console.log("height: " + window.innerHeight);
 window.addEventListener("resize", () => {
   renderer.setSize(window.innerWidth, window.innerHeight + 100);
   renderer.render(scene, camera);
 });
-animate();
 
 const navIcon = document.querySelector(".nav-icon");
 const nav = document.querySelector("nav");
