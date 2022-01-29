@@ -68,7 +68,7 @@
           src="/Assets/svgs/Ellipse 19-modified.png">
   
         <div class=" lg:w-1/2 w-full md:px-20  lg:pl-10 lg:py-10 mt-10 lg:mt-10 align-center" >
-          <form action="#" autocomplete="off">
+          <form autocomplete="off">
             <div class="relative mb-6 ">
                   
               <input type="email" id="email" name="email"  placeholder="Email "  class="w-full  placeholder:text-white  bg-transparent border-b-2 outline-none text-white py-1 px-3 leading-8  duration-200 ease-in-out" required>
@@ -81,7 +81,7 @@
             </div>
             <div class="relative mb-6 ">
   
-              <input type="text" id="mobile-number" name="mobile-number" placeholder="Phone number" pattern="[0-9]{10}" title="The mobile number should contain only digits and with length 10" 
+              <input type="text" id="mobile-number" name="mobilenumber" placeholder="Phone number" pattern="[0-9]{10}" title="The mobile number should contain only digits and with length 10" 
                 class="w-full placeholder:text-white bg-transparent border-b-2 outline-none text-white py-1 px-3 leading-8  duration-200 ease-in-out" required >
             </div>
             <div class="relative mb-6 ">
@@ -90,7 +90,7 @@
                 class="w-full placeholder:text-white bg-transparent border-b-2 outline-none text-white py-1 px-3 leading-8  duration-200 ease-in-out" required >
             </div>
             <div class="text-red-700" id="text-message">
-                <p class="text-center"></p>
+                <p class="text-center" id="error-text"></p>
               </div>
             <div class="text-center p-3">
               <button
@@ -109,7 +109,7 @@
     </div>
   </section>
   
-
+  <script type="module" src="/scripts/signup.js"></script>
 <script type="module" src="/scripts/test/test.js"></script>
 </body>
 

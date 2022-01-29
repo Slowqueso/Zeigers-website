@@ -39,7 +39,15 @@
             <a href="./Riddler">Riddler</a>
             <a href="#tech-cards">TechEvents</a>
             <a href="#gaming">Gaming</a>
-            <a href="./Login">Login</a>
+            <% if (user) { %>
+              <a>Welcome, <%= user.name %></a>
+              <a href="/api/logout">Log out</a>
+            <% } else { %>
+              <a href="./Login">Log in</a>
+            <% } %>
+            <!-- <a href="./Login">Login</a>
+            <a href="/api/logout">Logout</a> -->
+
           </div>
         </div>
       </nav>
