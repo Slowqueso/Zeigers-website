@@ -156,16 +156,16 @@
 .tech_event_title {
   padding: 5% 5% 5% 5%;
   color: var(--palette-black);
-  font-family: var(--fs-poppins-600);
+  font-family: var(--fs-josef-600);
   font-weight: bolder;
-  font-size: 42px;
+  font-size: 4em;
   opacity: 1;
   display: flex;
   /* height: 25vh; */
   align-items: center;
   justify-content: left;
   flex-wrap: wrap;
-  text-shadow: 1px 3px 3px #868686a4;
+  /* text-shadow: 1px 3px 3px #868686a4; */
 }
 .wrapper_cards {
   display: flex;

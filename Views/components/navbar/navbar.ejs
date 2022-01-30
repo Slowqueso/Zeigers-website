@@ -1,0 +1,36 @@
+<nav>
+  <div class="nav-content">
+    <div class="logo-div">
+      <a href="/" class="logo">
+        <object
+          width="65"
+          height="65"
+          data="/Assets/svgs/logo.svg"
+          display="block"
+        ></object>
+      </a>
+    </div>
+
+    <div class="nav-icon">
+      <div class="bar one"></div>
+      <div class="bar two"></div>
+      <div class="bar three"></div>
+    </div>
+
+    <div class="nav-links">
+      <a href="/Home">Home</a>
+      <a href="/AboutUs">AboutUs</a>
+      <a href="/Riddler">Riddler</a>
+      <a href="/TechEvents">TechEvents</a>
+      <a href="/Games">Gaming</a>
+      <% if (user) { %>
+      <a>Welcome, <%= user.name %></a>
+      <a href="/api/logout" onclick="logout()">Log out</a>
+      <% } else { %>
+      <a href="/Login">Log in</a>
+      <% } %>
+      <!-- <a href="./Login">Login</a>
+            <a href="/api/logout">Logout</a> -->
+    </div>
+  </div>
+</nav>

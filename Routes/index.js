@@ -18,10 +18,10 @@ router.use(cors());
 // Custom Middlewares
 
 //DB Config
-connectDB()
+connectDB();
 
 //API Endpoints
-router.get('*',checkUser)
+router.get("*", checkUser);
 
 router.get("/test", (req, res) => {
   res.status(200).render(path.join(__dirname, "views", "components", "header"));
@@ -36,8 +36,12 @@ router.get("/SignUp", (req, res) => {
   res.status(200).render(path.join(__dirname, "views", "signup"));
 });
 
-router.get("/api/participate",requireAuth, (req, res) => {
+router.get("/api/participate", requireAuth, (req, res) => {
   res.status(200).render(path.join(__dirname, "views", "components", "header"));
+});
+
+router.get("/Games/Valorant", (req, res) => {
+  res.status(200).render(path.join(__dirname, "views", "valorant"));
 });
 
 //export
