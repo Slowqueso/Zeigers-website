@@ -48,5 +48,9 @@ router.get("/AboutUs", (req, res) => {
   res.status(200).render(path.join(__dirname, "views", "aboutUs"));
 });
 
+router.get("/Events/CodeX", (req, res) => {
+  res.status(200).render(path.join(__dirname, "views", "codeX"));
+});
+
 //export
 export default router;

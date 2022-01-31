@@ -51,6 +51,7 @@ body section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 1.5rem;
 }
 .section-banner .banner-container .banner-header {
   font-family: var(--fs-josef-600);
@@ -143,4 +144,12 @@ body section {
   .section-container #rule-container {
     width: 90%;
   }
+}
+#round_title {
+  color: black;
+  font-family: var(--fs-josef-400);
+}
+#level_title {
+  color: rgb(100, 100, 100);
+  font-family: var(--fs-josef-400);
 }
