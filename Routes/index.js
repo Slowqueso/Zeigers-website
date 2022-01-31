@@ -44,5 +44,9 @@ router.get("/Games/Valorant", (req, res) => {
   res.status(200).render(path.join(__dirname, "views", "valorant"));
 });
 
+router.get("/AboutUs", (req, res) => {
+  res.status(200).render(path.join(__dirname, "views", "aboutUs"));
+});
+
 //export
 export default router;
