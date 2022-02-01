@@ -72,5 +72,8 @@ router.get("/Events/TechNutz", (req,res)=>{
   res.status(200).render(path.join(__dirname, "views", "techNutz"));
 })
 
+router.get("/Games/BGMI", (req,res)=>{
+  res.status(200).render(path.join(__dirname, "views", "bgmi"));
+})
 //export
 export default router;

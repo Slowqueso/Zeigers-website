@@ -4,46 +4,30 @@
   <link rel="stylesheet" href="/css/header/header.css" />
   <link rel="stylesheet" href="/css/events/event_header.css" />
 </head>
-<canvas
-  class="canvas"
-  style="width: 100%; height: 100%; position: fixed"
-  id="canvas"
-></canvas>
+<canvas class="canvas" style="width: 100%; height: 100%; position: fixed" id="canvas"></canvas>
 <header>
   <%- include('../navbar/navbar.ejs') -%>
-  <div class="event-banner">
-    <img
-      src="/Assets/images/Valorant_logo.png"
-      alt=""
-      class="event-logo unselectable"
-      id="valorant_logo"
-    />
-    <div class="inner-banner-container">
-      <h1 class="event-banner-title unselectable" id="header-title">CodeX</h1>
-      <h3 class="event-banner-desc unselectable">
-        Valorant is a team-based first-person hero shooter set in the near
-        future.Players play as one of a set of Agents, characters designed based
-        on several countries and cultures around the world. In the main game
-        mode, players are assigned to either the attacking or defending team
-        with each team having five players on it.
-      </h3>
-      <a href="#participation" style="max-width: 7cm">
-        <div class="banner-button">
-          <div>
-            <h3 class="unselectable">Participate Now</h3>
+    <div class="event-banner">
+      <img src="/Assets/images/Valorant_logo.png" alt="" class="event-logo unselectable" id="valorant_logo" />
+      <div class="inner-banner-container">
+        <h1 class="event-banner-title unselectable" id="header-title">CodeX</h1>
+        <h3 class="event-banner-desc unselectable">
+          This is your one stop shop for everything related to coding
+          CodeX is a competitive programming platform where beginners can learn alot by their basic algorithm tests
+          whereas the experts can show their talent through coding.
+        </h3>
+        <a href="#participation" style="max-width: 7cm">
+          <div class="banner-button">
+            <div>
+              <h3 class="unselectable">Participate Now</h3>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
 
-    <img
-      src="/Assets/images/retro_PC.png"
-      alt="astronaut-svg"
-      id="astronaut"
-      class="unselectable"
-    />
-    <img src="/Assets/svgs/rope2.svg" alt="" id="rope" class="unselectable" />
-  </div>
+      <img src="/Assets/images/retro_PC.png" alt="astronaut-svg" id="astronaut" class="unselectable" />
+      <img src="/Assets/svgs/rope2.svg" alt="" id="rope" class="unselectable" />
+    </div>
 </header>
 <script src="/scripts/test/test.js" type="module"></script>
 <script src="/scripts/events/client.js" type="module"></script>
