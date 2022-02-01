@@ -15,7 +15,7 @@ header nav {
   font-family: var(--fs-josef-600);
   width: 70%;
   text-align: center;
-  font-size: 12em;
+  font-size: 10em;
 }
 .event-banner .inner-banner-container {
   flex-direction: column;
@@ -29,8 +29,13 @@ header nav {
 .event-banner img#valorant_logo {
   width: 40%;
 }
+.event-banner img#chess_logo{
+  width: 30%;
+  filter: brightness(0.6);
+}
 .event-banner img#rl_logo {
   width: 60%;
+  filter: brightness(0.8);
 }
 .event-banner img#astronaut {
   z-index: 10;
@@ -63,13 +68,19 @@ header nav {
   header nav {
     position: sticky;
   }
+  
   .event-banner {
-    min-height: 100vh !important;
+    min-height: 120vh !important;
   }
 }
 @media only screen and (max-width: 400px) and (max-height: 900px) {
   header nav {
     position: sticky;
+  }
+  .event-banner img#chess_logo{
+    margin: auto;
+    width: 60%;
+    filter: brightness(0.6);
   }
   .event-banner {
     min-height: 85vh;
@@ -97,7 +108,7 @@ header nav {
     right: 0;
   }
   .event-banner .event-banner-title {
-    font-size: 5em !important;
+    font-size: 4em !important;
     z-index: 2;
     width: 100%;
     margin: 2rem auto;
@@ -126,6 +137,10 @@ header nav {
   header {
     min-height: 60vh;
   }
+  .event-banner img#chess_logo{
+    margin: auto;
+    width: 50%;
+  }
   header nav {
     position: sticky;
   }
@@ -140,6 +155,10 @@ header nav {
     width: 60%;
     height: auto;
     filter: brightness(0.6);
+  }
+  .event-banner img#rl_logo{
+    margin: auto;
+    filter: brightness(0.5);
   }
   .event-banner img.event-logo {
     left: 0;

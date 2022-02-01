@@ -43,6 +43,7 @@ body section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  /* background-filter: brightness(0.8); */
 
   min-height: 70vh;
 }
@@ -152,4 +153,41 @@ body section {
 #level_title {
   color: rgb(100, 100, 100);
   font-family: var(--fs-josef-400);
+}
+#image-holder {
+  height: 500px;
+  width: 1000px;
+  
+}
+
+@media (max-width: 1100px) {
+  #section-desc {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 830px) {
+  #image-holder {
+    height: 250px;
+    width: 500px;
+  }
+
+  #section-desc {
+    font-size: 18px;
+  }
+}
+@media (max-width: 720px) {
+  #image-holder {
+    height: 250px;
+    width: 300px;
+  }
+}
+@media (max-width: 400px) {
+  #image-holder {
+    height: 150px;
+    width: 200px;
+  }
+  #section-desc {
+    font-size: 18px;
+  }
 }
