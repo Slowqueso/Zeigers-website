@@ -48,5 +48,9 @@ router.get("/AboutUs", (req, res) => {
   res.status(200).render(path.join(__dirname, "views", "aboutUs"));
 });
 
+router.get("/Games", (req, res) => {
+  res.status(200).render(path.join(__dirname, "views", "gamesGen"));
+});
+
 //export
 export default router;
