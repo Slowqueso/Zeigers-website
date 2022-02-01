@@ -179,7 +179,8 @@ header .navbar ul li {
 .banner {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 80vh;
+  max-height: 100vh;
   padding: 5rem;
 }
 .banner img {
@@ -235,7 +236,7 @@ header .navbar ul li {
   position: relative;
   top: -25%;
   margin-left: 10rem;
-  font-size: 1000%;
+  font-size: 7rem;
 }
 
 .banner-desc {
@@ -307,7 +308,7 @@ header .navbar ul li {
     font-size: 16px;
   }
   .banner button#banner-button {
-    bottom: 40%;
+    bottom: 20%;
   }
   #canvas {
     height: 190vh !important;
@@ -385,7 +386,7 @@ nav.scrolled {
     overflow: hidden;
   }
   #banner-2 {
-    height: 50vh !important;
+    height: 60vh !important;
   }
   #canvas {
     max-height: 160vh !important;
@@ -415,7 +416,7 @@ nav.scrolled {
     left: 10%;
   }
   #banner-button {
-    bottom: 10% !important;
+    bottom: 40% !important;
     left: 50% !important;
   }
 }

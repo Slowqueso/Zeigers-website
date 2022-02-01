@@ -52,5 +52,25 @@ router.get("/Games", (req, res) => {
   res.status(200).render(path.join(__dirname, "views", "gamesGen"));
 });
 
+router.get("/Events/CodeX", (req, res) => {
+  res.status(200).render(path.join(__dirname, "views", "codeX"));
+});
+
+router.get("/Events/WebDesign", (req, res) => {
+  res.status(200).render(path.join(__dirname, "views", "webDev"));
+});
+
+router.get("/Games/Checkmate", (req,res)=>{
+  res.status(200).render(path.join(__dirname, "views", "chess"));
+})
+
+router.get("/Games/RocketLeague", (req, res)=>{
+  res.status(200).render(path.join(__dirname,"views", "rocketLeague"));
+})
+
+router.get("/Events/TechNutz", (req,res)=>{
+  res.status(200).render(path.join(__dirname, "views", "techNutz"));
+})
+
 //export
 export default router;

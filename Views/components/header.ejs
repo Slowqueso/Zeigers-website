@@ -34,16 +34,16 @@
           </div>
 
           <div class="nav-links">
-            <a href="./Home">Home</a>
-            <a href="./AboutUs">AboutUs</a>
-            <a href="./Riddler">Riddler</a>
+            <a href="/Home">Home</a>
+            <a href="/AboutUs">AboutUs</a>
+            <a href="/Riddler">Riddler</a>
             <a href="#tech-cards">TechEvents</a>
             <a href="#gaming">Gaming</a>
             <% if (user) { %>
             <a>Welcome, <%= user.name %></a>
             <a href="/api/logout" onclick="logout()">Log out</a>
             <% } else { %>
-            <a href="./Login">Log in</a>
+            <a href="/Login">Log in</a>
             <% } %>
             <!-- <a href="./Login">Login</a>
             <a href="/api/logout">Logout</a> -->
@@ -68,14 +68,10 @@
       <div class="banner" id="banner-2">
         <img src="/Assets/svgs/Asteroid.svg" alt="asteroid-svg" id="asteroid" />
         <h1 class="banner-title unselectable" id="banner-title2">
-          This Year . . .
+          Up to the Challenge ?
         </h1>
         <h3 class="banner-desc" id="banner-desc1">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.
+          Who doesn't love brain teasers and challenging riddles? If you think you’re already a pro at solving tricky riddles, put yourself to the test with these and find out!
         </h3>
         <a href="./AboutUs">
           <button class="button" id="banner-button">
