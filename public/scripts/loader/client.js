@@ -5,8 +5,8 @@ setTimeout(()=>{
     loader.style.display = 'flex';
 },50)
 
+body.style.overflow = 'hidden';
 window.onload = (e) =>{
-    body.style.overflow = 'hidden';
     setTimeout(()=>{
         body.style.overflow = 'scroll';
         loader.style.display = 'none';
