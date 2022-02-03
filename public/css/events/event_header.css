@@ -31,11 +31,21 @@ header nav {
 }
 .event-banner img#chess_logo{
   width: 30%;
+  left: 60%;
+  top: 5rem;
   filter: brightness(0.6);
 }
 .event-banner img#rl_logo {
   width: 60%;
   filter: brightness(0.8);
+}
+.event-banner img#tn_logo{
+  width: 25%;
+  left: 60%;
+}
+.event-banner img#wd_logo{
+  width: 50%;
+
 }
 .event-banner img#astronaut {
   z-index: 10;
@@ -93,6 +103,17 @@ header nav {
     width: 60%;
     height: auto;
     filter: brightness(0.6);
+  }
+  .event-banner img#tn_logo{
+    margin: auto;
+    filter: brightness(0.5);
+    width: 70%;
+  }
+  .event-banner img#wd_logo{
+    margin: auto;
+    width: 80%;
+    filter: brightness(0.5);
+    top: 10%;
   }
   .event-banner img#valorant_logo {
     position: absolute;
@@ -157,6 +178,10 @@ header nav {
     filter: brightness(0.6);
   }
   .event-banner img#rl_logo{
+    margin: auto;
+    filter: brightness(0.5);
+  }
+  .event-banner img#tn_logo{
     margin: auto;
     filter: brightness(0.5);
   }

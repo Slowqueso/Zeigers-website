@@ -2,7 +2,16 @@ const sponsors = [
   {
     name: "Sponsor",
     logo: "/Assets/svgs/spon.svg",
-    desc: "Chirag Bhatia.",
+    desc: "Lorem Ipsum",
+    address: "244, X,n S R Road, Nsr Road, Saibabacolony, Lorem Ipsum",
+    contact: "1234567890",
+    email: "abc@gmail.com",
+    webLink: "www.lmao.com",
+  },
+  {
+    name: "Sponsor",
+    logo: "/Assets/svgs/spon.svg",
+    desc: "Lorem Ipsum",
     address: "244, X,n S R Road, Nsr Road, Saibabacolony",
     contact: "1234567890",
     email: "abc@gmail.com",
@@ -11,25 +20,7 @@ const sponsors = [
   {
     name: "Sponsor",
     logo: "/Assets/svgs/spon.svg",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, est.",
-    address: "244, X,n S R Road, Nsr Road, Saibabacolony",
-    contact: "1234567890",
-    email: "abc@gmail.com",
-    webLink: "www.lmao.com",
-  },
-  {
-    name: "Sanjana Dubey",
-    logo: "/Assets/svgs/spon.svg",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, est.",
-    address: "244, X,n S R Road, Nsr Road, Saibabacolony",
-    contact: "1234567890",
-    email: "abc@gmail.com",
-    webLink: "www.lmao.com",
-  },
-  {
-    name: "Sanjana Dubey",
-    logo: "/Assets/svgs/spon.svg",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, est.",
+    desc: "Lorem Ipsum",
     address: "244, X,n S R Road, Nsr Road, Saibabacolony",
     contact: "1234567890",
     email: "abc@gmail.com",
@@ -38,12 +29,13 @@ const sponsors = [
   {
     name: "Sponsor",
     logo: "/Assets/svgs/spon.svg",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, est.",
+    desc: "Lorem Ipsum",
     address: "244, X,n S R Road, Nsr Road, Saibabacolony",
     contact: "1234567890",
     email: "abc@gmail.com",
     webLink: "www.lmao.com",
   },
+
 ];
 
 const container = document.querySelector("#cardContainer");
@@ -51,6 +43,7 @@ const modalContainer = document.querySelector("#modalContainer");
 
 const closeModal = () => {
   modalContainer.style.display = "none";
+  document.querySelector('body').style.overflow = 'scroll';
 };
 modalContainer.addEventListener("click", () => {
   closeModal();
@@ -142,7 +135,7 @@ for (let i = 0; i < sponsors.length; i++) {
         </div>
         <div class="sponsors-desc">
           <p class="card-sponsors-body">
-            ${sponsors[i].desc}
+            ${sponsors[i].name}
           </p>
         </div>
       </div>
@@ -154,6 +147,7 @@ for (let i = 0; i < sponsors.length; i++) {
 
 document.querySelectorAll(".card-sponsors").forEach((card) => {
   card.addEventListener("click", () => {
+    document.querySelector('body').style.overflow = 'hidden';
     displayModal(card.getAttribute("card-id"));
   });
 });

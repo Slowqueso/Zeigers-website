@@ -371,7 +371,7 @@ nav.scrolled {
     left: 50% !important;
   }
 }
-@media only screen and (max-width: 400px) and (max-height: 900px) {
+@media only screen and (max-width: 625px) and (max-height: 920px) {
   nav {
     margin-bottom: 0px;
     position: sticky;
@@ -434,4 +434,10 @@ nav.scrolled {
 .float-container .floating-title {
   color: white;
   text-align: center;
+}
+@media (max-width: 380px){
+  .tech_event_title{
+    font-size: 3em;
+    justify-content: center;
+  }
 }

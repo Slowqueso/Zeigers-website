@@ -51,10 +51,9 @@
 .inner_image {
   width: 170px;
   height: 171px;
-  background: url("/Assets/images/demoImage.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  /* background-size: cover; */
   opacity: 1;
   position: absolute;
   top: 65px;

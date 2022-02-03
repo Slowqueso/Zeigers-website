@@ -100,27 +100,25 @@ window.addEventListener("scroll", (e) => {
     asteroid.style.transform = `translateX(${-value * 0.5}px)  rotateZ(${
       (0 - value) / 15
     }deg)`;
-    if (value >= 200) {
+    // if (value >= 200) {
       title2.style.transform = `translateX(${value / 12}px)`;
-    }
-  } else if (window.innerWidth < 830 && window.innerWidth > 400) {
-    saturn.style.left = `calc(45% + ${value * 0.5}px)`;
+    // }
+  } else if (window.innerWidth < 830 && window.innerWidth > 625) {
+    saturn.style.left = `calc(45% + ${value * 0.2}px)`;
     title1.style.margin = `${value * 0.25}px 0px 0px ${0 - value / 8}rem`;
     asteroid.style.transform = `translateX(${-value * 0.5}px)  rotateZ(${
       (0 - value) / 15
     }deg)`;
-    if (value >= 200) {
-      title2.style.transform = `translateX(${value / 12}px)`;
-    }
+    // if (value >= 200) {
+      // title2.style.transform = `translateX(${value / 15}px)`;
+    // }
   } else {
-    saturn.style.left = `calc(66px + ${value * 5}px)`;
+    saturn.style.left = `calc(66px + ${value * 2}px)`;
     title1.style.margin = `${value * 0.75}px 0px 0px ${0 - value / 12}rem`;
-    asteroid.style.transform = `translateX(${-value / 5}px)  rotateZ(${
-      (0 - value) / 10
-    }deg)`;
-    if (value > 80) {
-      title2.style.left = `${value / 20}%`;
-      desc1.style.left = `${value / 20}%`;
-    }
+    asteroid.style.transform = `translateX(${-value / 5}px)  rotateZ(${(0 - value) / 10}deg)`;
+    // if (value > 80) {
+      // title2.style.left = `${value / 20}%`;
+      // desc1.style.left = `${value / 20}%`;
+    // }
   }
 });

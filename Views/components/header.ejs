@@ -19,6 +19,7 @@
           <div class="logo-div">
             <a href="/" class="logo">
               <object
+                class="unselectable"
                 width="65"
                 height="65"
                 data="Assets/svgs/logo.svg"
@@ -34,16 +35,16 @@
           </div>
 
           <div class="nav-links">
-            <a href="/Home">Home</a>
-            <a href="/AboutUs">AboutUs</a>
-            <a href="/Riddler">Riddler</a>
-            <a href="#tech-cards">TechEvents</a>
-            <a href="#gaming">Gaming</a>
+            <a href="/Home" class="unselectable">Home</a>
+            <a href="/AboutUs" class="unselectable">AboutUs</a>
+            <a href="/Riddler" class="unselectable">Riddler</a>
+            <a href="#tech-cards" class="unselectable">TechEvents</a>
+            <a href="#gaming" class="unselectable">Gaming</a>
             <% if (user) { %>
             <a>Welcome, <%= user.name %></a>
-            <a href="/api/logout" onclick="logout()">Log out</a>
+            <a href="/api/logout" class="unselectable" onclick="logout()">Log out</a>
             <% } else { %>
-            <a href="/Login">Log in</a>
+            <a href="/Login" class="unselectable">Log in</a>
             <% } %>
             <!-- <a href="./Login">Login</a>
             <a href="/api/logout">Logout</a> -->
@@ -62,15 +63,16 @@
           src="/Assets/svgs/astronaut.svg"
           alt="astronaut-svg"
           id="astronaut"
+          class="unselectable"
         />
-        <img src="/Assets/svgs/rope2.svg" alt="" id="rope" />
+        <img src="/Assets/svgs/rope2.svg" class="unselectable" alt="" id="rope" />
       </div>
       <div class="banner" id="banner-2">
-        <img src="/Assets/svgs/Asteroid.svg" alt="asteroid-svg" id="asteroid" />
+        <img src="/Assets/svgs/Asteroid.svg" class="unselectable" alt="asteroid-svg" id="asteroid" />
         <h1 class="banner-title unselectable" id="banner-title2">
           Up to the Challenge ?
         </h1>
-        <h3 class="banner-desc" id="banner-desc1">
+        <h3 class="banner-desc unselectable" id="banner-desc1">
           Who doesn't love brain teasers and challenging riddles? If you think you're already a pro at solving tricky riddles, put yourself to the test with these and find out!
         </h3>
         <a href="/Riddler">

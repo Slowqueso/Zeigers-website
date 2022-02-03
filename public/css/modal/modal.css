@@ -97,7 +97,7 @@
 }
 .location_icon_and_address {
   width: 222px;
-  height: 33px;
+  height: 36px;
   /* background: url(../images/v323_95.png); */
   background-repeat: no-repeat;
   background-position: center center;
@@ -112,7 +112,7 @@
   width: 196px;
   color: rgba(255, 255, 255, 1);
   position: absolute;
-  top: 0px;
+  top: -5px;
   left: 26px;
   font-family: var(--fs-josef-400);
   font-weight: Regular;

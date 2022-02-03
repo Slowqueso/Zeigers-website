@@ -1,19 +1,20 @@
+=> Login Page button spacing
 
+=> Cards Re-work
 
-29th Jan:
-    => Login/Registration functioning
-    => Landing Page
+=> Texts Unselectable
 
+=> CodeX Rounds <-> Levels, Platform , Tie Breaker & Time Limit removal
 
+=> TechNutz Rounds <-> Levels, Bingo Blitz line 3 (the), 
 
--> About Us [30th Jan] - Sanjana Dubey
+=> WebDesign Banner (N visibility)
 
--> Event Pages [ Dev ] - Chirag Bhatia
+=> BGMI TDM banner image update
 
--> Games general Page [30th Jan (Design + Dev)] - Rahul Chauhan
+=> Games> Lobby Rules: "Discord"
 
--> Game Pages [Valorant - , Chess (11:30pm ), Rocket League, BGMI] [30th Jan] 
-
--> Riddler [4-5th Jan]
-
--> Max-height: 740px [moto g4]
+Safari:
+    - Landing Page > Gaming Banner z-index fix
+    - 
+    

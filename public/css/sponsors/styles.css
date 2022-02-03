@@ -20,6 +20,9 @@ body {
   flex-direction: column;
   width: 100%;
 }
+.sponsors-desc{
+  font-size: 1.5em;
+}
 .container-sponsors {
   height: auto;
   width: 80%;
@@ -76,7 +79,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .card-sponsors img {
   position: absolute;
