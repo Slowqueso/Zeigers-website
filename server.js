@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 //Middlewares
 app.use(express.static(path.join(__dirname, "public")));
-app.set("views", path.join("views"));
+app.set("views", "./views");
 app.engine('ejs', ejs.renderFile);
 app.set("view engine", "ejs");
 
