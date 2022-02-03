@@ -23,59 +23,59 @@ connectDB();
 //API Endpoints
 router.get("*", checkUser);
 router.get("/",(req,res)=>{
-  res.status(200).render(path.join(__dirname, "views","test.ejs"));
+  res.status(200).render(path.join(__dirname,"Views","test.ejs"));
 })
 router.get("/test", (req, res) => {
-  res.status(200).render(path.join(__dirname, "views", "components", "header"));
+  res.status(200).render(path.join(__dirname, "Views", "components", "header"));
 });
 router.get("/Home", (req, res) => {
-  res.status(200).render(path.join(__dirname, "views", "index"));
+  res.status(200).render(path.join(__dirname, "Views", "index"));
 });
 router.get("/Login", (req, res) => {
-  res.status(200).render(path.join(__dirname, "views", "login"));
+  res.status(200).render(path.join(__dirname, "Views", "login"));
 });
 router.get("/SignUp", (req, res) => {
-  res.status(200).render(path.join(__dirname, "views", "signup"));
+  res.status(200).render(path.join(__dirname, "Views", "signup"));
 });
 
 router.get("/api/participate", requireAuth, (req, res) => {
-  res.status(200).render(path.join(__dirname, "views", "components", "header"));
+  res.status(200).render(path.join(__dirname, "Views", "components", "header"));
 });
 
 router.get("/Games/Valorant", (req, res) => {
-  res.status(200).render(path.join(__dirname, "views", "valorant"));
+  res.status(200).render(path.join(__dirname, "Views", "valorant"));
 });
 
 router.get("/AboutUs", (req, res) => {
-  res.status(200).render(path.join(__dirname, "views", "aboutUs"));
+  res.status(200).render(path.join(__dirname, "Views", "aboutUs"));
 });
 
 router.get("/Games", (req, res) => {
-  res.status(200).render(path.join(__dirname, "views", "gamesGen"));
+  res.status(200).render(path.join(__dirname, "Views", "gamesGen"));
 });
 
 router.get("/Events/CodeX", (req, res) => {
-  res.status(200).render(path.join(__dirname, "views", "codeX"));
+  res.status(200).render(path.join(__dirname, "Views", "codeX"));
 });
 
 router.get("/Events/WebDesign", (req, res) => {
-  res.status(200).render(path.join(__dirname, "views", "webDev"));
+  res.status(200).render(path.join(__dirname, "Views", "webDev"));
 });
 
 router.get("/Games/Checkmate", (req,res)=>{
-  res.status(200).render(path.join(__dirname, "views", "chess"));
+  res.status(200).render(path.join(__dirname, "Views", "chess"));
 })
 
 router.get("/Games/RocketLeague", (req, res)=>{
-  res.status(200).render(path.join(__dirname,"views", "rocketLeague"));
+  res.status(200).render(path.join(__dirname,"Views", "rocketLeague"));
 })
 
 router.get("/Events/TechNutz", (req,res)=>{
-  res.status(200).render(path.join(__dirname, "views", "techNutz"));
+  res.status(200).render(path.join(__dirname, "Views", "techNutz"));
 })
 
 router.get("/Games/BGMI", (req,res)=>{
-  res.status(200).render(path.join(__dirname, "views", "bgmi"));
+  res.status(200).render(path.join(__dirname, "Views", "bgmi"));
 })
 //export
 export default router;

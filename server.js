@@ -23,7 +23,7 @@ console.log(__dirname);
 console.log(path.join(__dirname, "views"));
 //Middlewares
 app.use(express.static(path.join(__dirname, "public")));
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "Views"));
 app.engine('ejs', ejs.renderFile);
 app.set("view engine", "ejs");
 
