@@ -27,7 +27,7 @@ router.get("/test", (req, res) => {
   res.status(200).render(path.join(__dirname, "views", "components", "header"));
 });
 router.get("/Home", (req, res) => {
-  res.status(200).render(path.join(__dirname, "views", "index"));
+  res.status(200).render(path.join(__dirname, "views", "index.ejs"));
 });
 router.get("/Login", (req, res) => {
   res.status(200).render(path.join(__dirname, "views", "login"));
