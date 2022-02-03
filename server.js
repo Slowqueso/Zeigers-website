@@ -6,6 +6,7 @@ import cors from "cors";
 import router from "./Routes/index.js";
 import userRoutes from "./Routes/userRoutes.js";
 import cookieParser from "cookie-parser";
+import ejs from 'ejs';
 
 // env config
 import dotenv from "dotenv";
@@ -19,10 +20,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 //Middlewares
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname, "node_modules", "three")));
+app.set("views", path.join(__dirname, "views"));
+app.engine('ejs', ejs.renderFile);
+app.set("view engine", "ejs");
 
 //Custom Middleware
 app.use(router);
