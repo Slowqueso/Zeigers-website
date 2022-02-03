@@ -10,17 +10,23 @@
 
 => 512x643 photo gallery
 
-=> WebDesign Banner (N visibility)
-
 => BGMI TDM banner image update
 
 => Games> Lobby Rules: "Discord"
 
-=> Gaming Page (414x896)
+=> Gaming Page (414x896) - R
 
-=> Nav scroll removal
+=> Nav scroll removal - R
 
-(414x896) All page responsive check
+(414x896) All page responsive check - R
+
+(390x585) All pages - R
+
+(414x736) All pages responsive check - R
+
+(1920x1080) All pages responsive check - R
+
+Protected Pages: Post Login > Login and Sign Up. Pre Login > Riddler - R
 
 Safari:
     - Landing Page > Gaming Banner z-index fix

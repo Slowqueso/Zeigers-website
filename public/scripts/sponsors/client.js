@@ -49,7 +49,6 @@ modalContainer.addEventListener("click", () => {
   closeModal();
 });
 const displayModal = (id) => {
-  console.log("gay");
   modalContainer.style.display = "flex";
   modalContainer.innerHTML = `  <div class="model">
     <div class="modelVector">
