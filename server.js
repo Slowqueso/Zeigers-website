@@ -17,6 +17,7 @@ const __dirname = path.resolve();
 const port = process.env.PORT || 8001;
 const app = express();
 app.use(express.json());
+console.log(__dirname);
 app.use(cookieParser());
 
 //Middlewares
