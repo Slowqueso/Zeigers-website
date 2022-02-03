@@ -23,7 +23,7 @@ connectDB();
 //API Endpoints
 router.get("*", checkUser);
 router.get("/",(req,res)=>{
-  res.status(200).render(path.join(__dirname, "views","test"));
+  res.status(200).render(path.join(__dirname, "views","test.ejs"));
 })
 router.get("/test", (req, res) => {
   res.status(200).render(path.join(__dirname, "views", "components", "header"));

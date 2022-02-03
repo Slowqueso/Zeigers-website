@@ -17,9 +17,10 @@ const __dirname = path.resolve();
 const port = process.env.PORT || 8001;
 const app = express();
 app.use(express.json());
-console.log(__dirname);
 app.use(cookieParser());
 
+console.log(__dirname);
+console.log(path.join(__dirname, "views"));
 //Middlewares
 app.use(express.static(path.join(__dirname, "public")));
 app.set("views", path.join(__dirname, "views"));
