@@ -5,7 +5,7 @@
     z-index: 200;
     top: 0;
     left: 0;
-    background-color: #121012;
+    background-color: #030303;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -13,4 +13,5 @@
 .loading img{
     width: 8cm;
     height: auto;
+
 }

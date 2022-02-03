@@ -91,6 +91,7 @@ header nav {
     margin: auto;
     width: 60%;
     filter: brightness(0.6);
+    left: 0;
   }
   .event-banner {
     min-height: 85vh;
@@ -161,6 +162,7 @@ header nav {
   .event-banner img#chess_logo{
     margin: auto;
     width: 50%;
+    left: 0;
   }
   header nav {
     position: sticky;

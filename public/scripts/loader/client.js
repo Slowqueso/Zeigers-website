@@ -4,10 +4,11 @@ loader.style.display = 'none';
 setTimeout(()=>{
     loader.style.display = 'flex';
 },50)
+
 window.onload = (e) =>{
     body.style.overflow = 'hidden';
     setTimeout(()=>{
         body.style.overflow = 'scroll';
         loader.style.display = 'none';
-    },2600)
+    },1000)
 }

@@ -274,3 +274,6 @@ body section {
     
   }
 }
+#single-banner{
+  background-image: linear-gradient(180deg, black, grey);
+}

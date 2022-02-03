@@ -1,10 +1,14 @@
 => Login Page button spacing
 
+=> form validation
+
 => Cards Re-work
 
 => Texts Unselectable
 
 => TechNutz Rounds <-> Levels, Bingo Blitz line 3 (the), 
+
+=> 512x643 photo gallery
 
 => WebDesign Banner (N visibility)
 
@@ -12,7 +16,13 @@
 
 => Games> Lobby Rules: "Discord"
 
+=> Gaming Page (414x896)
+
+=> Nav scroll removal
+
+(414x896) All page responsive check
+
 Safari:
     - Landing Page > Gaming Banner z-index fix
-    - 
-    
+    - Navbar z-index: 100, scroll removal
+    - Photo Gallery grid
