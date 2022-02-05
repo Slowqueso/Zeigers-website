@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/valorant/valorant.css" />
+    <link rel="stylesheet" href="/css/header/header.css" />
+    <title>Ziegers - Gaming</title>
+  </head>
+  <body class="body-container">
+    <canvas
+      class="canvas"
+      style="width: 100%; height: 100vh; position: fixed; z-index: -2"
+    ></canvas>
+    <%- include('./components/event-header/gamesGen.ejs') -%> <%-
+    include('./components/event-body/gamesGen.ejs') -%> <%-
+    include('./components/footer/footer.ejs') -%>
+    <script type="module" src="/scripts/test/test.js"></script>
+    <script src="/scripts/navbar/script.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/login.css" />
+  <link rel="stylesheet" href="/css/header/header.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            "press-start": ['"Josefin Sans"', "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <title>Ziegers - Login</title>
+</head>
+
+<body>
+  <canvas style="width: 100%; height: 100%; position: fixed" class="canvas" id="canvas"></canvas>
+  <header style="min-height: 0vh">
+    <nav>
+      <div class="nav-content">
+        <div class="logo-div">
+          <a href="/" class="logo">
+            <object width="65" height="65" data="Assets/svgs/logo.svg" display="block"></object>
+          </a>
+        </div>
+
+        <div class="nav-icon">
+          <div class="bar one"></div>
+          <div class="bar two"></div>
+          <div class="bar three"></div>
+        </div>
+
+        <div class="nav-links">
+          <a href="/Home">Home</a>
+          <a href="/AboutUs">AboutUs</a>
+          <a href="/Riddler">Riddler</a>
+          <a href="/Home#tech-cards">TechEvents</a>
+          <a href="/Games">Gaming</a>
+          <a href="/Login">Login</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section>
+    <div class="text-gray-600 body-font overflow-hidden">
+      <div class="container px-5 py-28 mx-auto relative flex flex-wrap">
+        <img alt="login" class="lg:w-1/2 w-56 h-56 lg:h-auto md:m-auto object-cover object-center rounded"
+          src="/Assets/svgs/Ellipse 19(1)-modified.png" />
+        <div class="lg:w-1/2 w-full md:px-20 lg:pl-10 lg:py-10 mt-10 lg:mt-10 align-center">
+          <form autocomplete="off">
+            <div class="relative mb-16"></div>
+            <div class="relative mb-16">
+              <input type="text" id="mobile" name="mobile" pattern="[0-9]{10}"
+                title="The mobile number should contain only digits and with length 10" placeholder="Phone number"
+                class="w-full placeholder:text-white bg-transparent border-b-2 outline-none text-white py-1 px-3 leading-8 duration-200 ease-in-out"
+                required />
+            </div>
+
+            <div class="relative mb-6">
+              <input type="password" id="password" name="password" pattern=".{8,}" title="Eight or more characters"
+                placeholder="Password"
+                class="w-full placeholder:text-white bg-transparent border-b-2 outline-none text-white py-1 px-3 leading-8 duration-200 ease-in-out" />
+            </div>
+            <!-- <div class="text-center p-3 text-indigo-500">Forgot Password</div> -->
+            <div class="text-red-700" id="text-message">
+              <p class="text-center" id="error-text"></p>
+            </div>
+            <div class="text-center p-3">
+              <button type="submit"
+                class="text-black text-center rounded-full bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 text-lg">
+                Login
+              </button>
+            </div>
+          </form>
+          <div class="text-center p-3 text-indigo-500">
+            <p>Don't have an account?</p>
+            <a class="underline pt-3" href="./SignUp">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="/scripts/login.js"></script>
+
+  <script type="module" src="/scripts/test/test.js"></script>
+  <script src="/scripts/navbar/script.js" type="module"></script>
+</body>
+
+</html>

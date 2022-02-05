@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  /* Global colours */
+  --palette-black: #000000;
+  --palette-darkPurple: #422a90;
+  --palette-mediumPurple: #5651a6;
+  --palette-lightPurple: #909fd6;
+  --palette-aquaBlue: #48bfe4;
+  --palette-lightBlue: #bbdaf6;
+  --palette-white: #ffffff;
+  --palette-red: #be3a2e;
+  /* Global fonts */
+  --fs-poppins-400: "Poppins", sans-serif;
+  --fs-josef-400: "Josefin Sans", sans-serif;
+  --fs-josef-600: "Josefin Sans", sans-serif;
+  --fs-poppins-200: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100%;
+  cursor: url("/Assets/svgs/cursor.cur"), auto;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(300px);
+  scroll-snap-points-x: repeat(300px);
+}
+
+* {
+  /* border: 1px solid red; */
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  /* overflow-x: hidden; */
+}
+a {
+  text-decoration: none;
+}
+
+.test-class {
+  color: var(--palette-red);
+}
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+section {
+  overflow-x: hidden !important;
+}
+.button {
+  width: auto;
+  border-radius: 30px;
+  border: none;
+  color: var(--palette-black);
+  font-size: 22px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: var(--palette-mediumPurple);
+  color: white;
+}
+.button i {
+  margin-left: 10px;
+}
+.canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  width: 100%;
+  height: 200vh;
+}
+.banner-button {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+    -90deg,
+    rgba(144, 159, 214, 0.6),
+    rgba(190, 58, 46, 0.6)
+  );
+  max-width: 6cm;
+  width: 100%;
+  margin: auto;
+  border-radius: 5px;
+}
+.banner-button div {
+  display: flex;
+  background-image: linear-gradient(
+    -90deg,
+    var(--palette-lightPurple),
+    var(--palette-red)
+  );
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+.banner-button div h3 {
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+}

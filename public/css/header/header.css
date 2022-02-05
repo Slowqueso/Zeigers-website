@@ -1,0 +1,466 @@
+@import url("../global.css");
+
+* {
+  font-family: var(--fs-poppins-400);
+}
+nav {
+  margin-bottom: 2rem;
+  transition: 0.3s;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  z-index: 100;
+}
+body {
+  overflow-x: hidden !important;
+}
+header {
+  min-height: 100vh;
+  padding-top: 6rem;
+  overflow-x: hidden !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header nav {
+  height: 10vh;
+  width: 100%;
+}
+header nav .nav-content {
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  overflow: hidden;
+  justify-content: space-between;
+}
+.nav-content .logo-div {
+  display: flex;
+  color: white;
+  align-items: center;
+  /* border: 1px solid blue; */
+  width: fit-content;
+}
+.nav-content .logo-div .logo {
+  /* border: 1px solid white; */
+  transform: translateX(1rem) translateY(0.5rem);
+  height: 65px;
+  width: 65px;
+}
+.nav-content a {
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+  color: #ffffff;
+}
+.nav-content a:hover,
+.nav-icon:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  text-decoration: underline;
+}
+header nav .nav-content .nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+.nav-links a {
+  width: fit-content;
+}
+@media (max-width: 820px) {
+  .show {
+    background-color: #000000;
+  }
+  nav {
+    margin-bottom: 0px;
+    position: sticky;
+  }
+  header {
+    padding-top: 0px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 75px;
+    right: 0;
+    padding-right: 15px;
+    line-height: 45px;
+    height: 0;
+    width: 100% !important;
+
+    background: #333333;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    transition: height 2s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.3s;
+  }
+
+  .show .nav-links {
+    height: 100%;
+    background-color: #000000;
+  }
+
+  .nav-links a {
+    height: 0;
+    /* width: 0; */
+    opacity: 0;
+    overflow: hidden;
+    margin: 1rem 50px;
+    transition: opacity 1.5s, height 2s;
+  }
+
+  .show .nav-links a {
+    opacity: 1;
+    width: auto;
+    height: auto;
+  }
+
+  .nav-icon {
+    display: grid !important;
+    order: 1;
+    grid-gap: 5px;
+    grid-template-columns: auto;
+    /* border: 1px solid white; */
+    margin-right: 2rem;
+    padding: 28px 0;
+    height: 10px;
+    cursor: pointer;
+  }
+
+  /* .logo {
+    order: 2;
+  } */
+
+  .logo-remaining {
+    display: none;
+  }
+}
+.nav-icon {
+  display: none;
+  width: fit-content;
+  transition: all 0.3s;
+}
+/* Pasting from here */
+.show .one {
+  transform: rotate(45deg) translateY(3.5px);
+}
+
+.show .two {
+  transform: rotate(-45deg) translateY(-5.5px);
+}
+
+.show .three {
+  display: none;
+}
+.bar {
+  height: 1px;
+  width: 18px;
+  background: white;
+  transition: 0.5s;
+}
+
+header .navbar ul li {
+  color: white;
+}
+.navbar .logo {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+.navbar .logo .image-wannabe {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid red;
+  height: 65px;
+  width: 65px;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  max-height: 100vh;
+  padding: 5rem;
+}
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+.banner img#saturn {
+  width: 70%;
+  height: 70%;
+  z-index: 2;
+  top: 2rem;
+  left: 45%;
+}
+.banner img#astronaut {
+  z-index: 10;
+  height: 160px;
+  width: 160px;
+  position: absolute;
+  top: 43%;
+  left: 64%;
+  animation: antiGravity 7s infinite;
+}
+.banner img#rope {
+  z-index: 3;
+  height: 80%;
+  width: 100%;
+  /* top: 50%; */
+  top: -30%;
+  left: 20%;
+  /* border: 1px solid green; */
+
+  transform: rotateX(180deg) rotateZ(0deg);
+  /* left: 68%; */
+}
+.banner #asteroid {
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  top: -25%;
+  left: -25%;
+}
+.banner-title {
+  font-family: var(--fs-josef-600);
+  color: white;
+  font-size: 250px;
+  text-align: center;
+}
+.banner #banner-title2 {
+  position: relative;
+  top: -25%;
+  margin-left: 10rem;
+  font-size: 7rem;
+}
+
+.banner-desc {
+  color: white;
+  font-family: var(--fs-poppins-200);
+  font-weight: lighter;
+  font-size: 22px;
+  position: relative;
+  top: -20%;
+  left: 15%;
+  width: 70%;
+  margin: auto;
+}
+.banner button#banner-button {
+  position: absolute;
+  left: 75%;
+  bottom: 30%;
+}
+
+@keyframes antiGravity {
+  0% {
+    transform: rotateZ(-45deg);
+  }
+  50% {
+    transform: rotateZ(45deg);
+  }
+  100% {
+    transform: rotateZ(-45deg);
+  }
+}
+@media only screen and (max-width: 830px) and (max-height: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    max-height: 200vh;
+    overflow: hidden;
+  }
+  .banner {
+    padding: 2rem;
+    height: 67vh !important;
+  }
+  .banner-title {
+    font-size: 120px;
+  }
+  #banner-2 {
+    height: 40vh !important;
+  }
+  #banner-title1 {
+    position: relative;
+    top: 20%;
+    z-index: 2;
+  }
+  .banner img#astronaut {
+    display: none;
+  }
+  .banner img#rope {
+    display: none;
+  }
+  .banner img#asteroid {
+    width: 80%;
+    height: 80%;
+  }
+  .banner #banner-title2 {
+    font-size: 98px;
+    margin-left: 10rem;
+    width: 75%;
+  }
+  .banner-desc {
+    font-size: 16px;
+  }
+  .banner button#banner-button {
+    bottom: 20%;
+  }
+  #canvas {
+    height: 190vh !important;
+  }
+  #banner-2 {
+    height: 75vh;
+  }
+}
+nav.scrolled {
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 5px -5px #333;
+}
+@media (max-height: 740px) and (max-width: 420px) {
+  nav {
+    margin-bottom: 0px;
+    position: sticky;
+  }
+  .banner {
+    padding: 2rem;
+    height: 100vh;
+  }
+  .header {
+    padding-top: 0px;
+    max-height: 100vh !important;
+    overflow: hidden;
+  }
+  #banner-2 {
+    height: 80vh !important;
+  }
+  #canvas {
+    max-height: 160vh !important;
+  }
+  .banner-title {
+    font-size: 68px;
+  }
+  .banner img#saturn {
+    height: 634px;
+    width: 634px;
+    left: 66px;
+    top: 6%;
+  }
+  .banner img#asteroid {
+    height: 368px;
+    width: 368px;
+    top: -25%;
+    left: -25%;
+  }
+  #banner-title2 {
+    font-size: 48px !important;
+    width: 90% !important;
+    margin-left: 20% !important;
+  }
+  .banner-desc {
+    width: 90%;
+    left: 10%;
+  }
+  #banner-button {
+    bottom: 10% !important;
+    left: 50%;
+  }
+}
+@media only screen and (max-width: 625px) and (max-height: 920px) {
+  nav {
+    margin-bottom: 0px;
+    position: sticky;
+  }
+  .banner {
+    padding: 2rem;
+    height: 100vh !important;
+  }
+  .header {
+    padding-top: 0px;
+    max-height: 100vh !important;
+    overflow: hidden;
+  }
+  #banner-2 {
+    min-height: 60vh !important;
+  }
+  #canvas {
+    max-height: 160vh !important;
+  }
+  .banner-title {
+    font-size: 68px;
+  }
+  .banner img#saturn {
+    height: 634px;
+    width: 634px;
+    z-index: 1;
+    left: 66px;
+    top: 6%;
+  }
+  .banner img#asteroid {
+    height: 368px;
+    width: 368px;
+    top: -25%;
+    left: -25%;
+  }
+  #banner-title2 {
+    font-size: 48px !important;
+    width: 90% !important;
+    margin-left: 20% !important;
+    z-index: 10;
+  }
+  .banner-desc {
+    width: 90%;
+    left: 10%;
+    z-index: 10;
+  }
+  #banner-button {
+    bottom: 40% !important;
+    left: 50%;
+  }
+}
+
+.float-container {
+  border: 1px solid white;
+  height: 10cm;
+  width: 10cm;
+  display: flex;
+  align-items: center;
+  background-image: url("/Assets/svgs/Planet-shaded.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.float-container .floating-title {
+  color: white;
+  text-align: center;
+}
+@media (max-width: 400px) {
+  .tech_event_title {
+    font-size: 3em;
+    justify-content: center;
+  }
+  .banner button#banner-button{
+    left: 50%;
+  }
+}
+
+@media screen and (width: 1920px) {
+  .explore-btn {
+    bottom: 50% !important;
+    left: 80% !important;
+  }
+}
+@media (max-width:420px){
+  #banner-button{
+    left: 0;
+  }
+  .banner button#banner-button{
+    left: 50%;
+    margin: auto;
+  }
+}

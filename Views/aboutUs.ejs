@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/header/header.css" />
+    <link rel="stylesheet" href="/css/aboutUs/styles.css">
+    <title>Ziegers - About Us</title>
+  </head>
+  <body style="max-width: 100%; overflow-x: hidden;">
+    <canvas
+      class="canvas"
+      style="width: 100%; height: 100%; position: fixed; z-index: -2;"
+      id="canvas"
+    ></canvas>
+    <img src="/Assets/svgs/spaceship.svg" alt="" id="spaceship">
+    <img src="/Assets/svgs/moon.svg" alt="" id="moon">
+    <header class="aboutUs-header">
+      <%- include('./components/navbar/navbar.ejs') -%>
+      <div class="flex-column">
+        <img src="/Assets/svgs/logo.svg" alt="">
+        <h1 class="header-title">Ziegers 2022</h1>
+      </div>
+    </header>
+    <section class="trailer-container">
+      <div class="trailer-section-title">
+        <span>Trailer</span>
+      </div>
+      <div class="tablet">
+        <div class="tablet-frame">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0L8cQ9nRtuE" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <div class="tablet-btn"></div>
+      </div>
+    </section>
+  
+    <section id="event-section">
+      <div class="event-section-title">
+          <span>Our Events</span>
+      </div>
+      <div class="event-container container-1">
+          <img src="/Assets/images/codeXLogo.png" alt="" srcset="">
+          <div class="event-content">
+              <h3>CODEX</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nemo dolor praesentium dolorem
+                  nihil sunt
+                  doloribus laudantium quam et quas? Maiores, nihil nisi. Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Minus earum reprehenderit est voluptate rerum, alias molestias aut natus repellat
+                  sapiente quasi, eum vitae.</p>
+          </div>
+      </div>
+  
+      <div class="event-container container-2">
+          <img src="/Assets/images/web_dev_logo.png" alt="" srcset="">
+          <div class="event-content">
+              <h3>WEB DESIGN</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nemo dolor praesentium dolorem
+                  nihil sunt
+                  doloribus laudantium quam et quas? Maiores, nihil nisi. Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Minus earum reprehenderit est voluptate rerum, alias molestias aut natus repellat
+                  sapiente quasi, eum vitae.</p>
+          </div>
+      </div>
+  
+      <div class="event-container container-1" >
+          <img src="/Assets/svgs/techNutzLogo.svg" alt="" srcset="">
+          <div class="event-content">
+              <h3>TECHNUTZ</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nemo dolor praesentium dolorem
+                  nihil sunt
+                  doloribus laudantium quam et quas? Maiores, nihil nisi. Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Minus earum reprehenderit est voluptate rerum, alias molestias aut natus repellat
+                  sapiente quasi, eum vitae.</p>
+          </div>
+      </div>
+  
+      <div class="event-container container-2">
+          <img src="/Assets/images/astro-gamepad.png" alt="" srcset="">
+          <div class="event-content">
+              <h3>GAMING</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nemo dolor praesentium dolorem
+                  nihil sunt
+                  doloribus laudantium quam et quas? Maiores, nihil nisi. Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Minus earum reprehenderit est voluptate rerum, alias molestias aut natus repellat
+                  sapiente quasi, eum vitae.</p>
+          </div>
+      </div>
+  </section>
+  
+    <section id="photoGallery">
+      <div class="photogallery-section-title">
+        <span>Photo Gallery</span>
+      </div>
+      <div class="photos-container">
+        <div class="img-container">
+          <img src="./images/fernando-cferdo-kyjUvRNAgoE-unsplash.jpg" alt="" srcset="">
+        </div>
+        <div class="img-container horizontal-stretch">
+          <img src="./images/fernando-cferdo-kyjUvRNAgoE-unsplash.jpg" alt="" srcset="">
+        </div>
+        <div class="img-container">
+          <img src="./images/helena-lopes-DkGIAjlIJu0-unsplash.jpg" alt="" srcset="">
+        </div>
+        <div class="img-container">
+          <img src="./images/nicholas-green-nPz8akkUmDI-unsplash.jpg" alt="" srcset="">
+        </div>
+        <div class="img-container">
+          <img src="./images/fernando-cferdo-kyjUvRNAgoE-unsplash.jpg" alt="" srcset="">
+        </div>
+        <div class="img-container">
+          <img src="./images/fateme-alaie-hT1BAWPBpEo-unsplash.jpg" alt="" srcset="">
+        </div>
+        <div class="img-container horizontal-stretch">
+          <img src="./images/helena-lopes-DkGIAjlIJu0-unsplash.jpg" alt="" srcset="">
+        </div>
+        <div class="img-container">
+          <img src="./images/nicholas-green-nPz8akkUmDI-unsplash.jpg" alt="" srcset="">
+        </div>
+        <div class="img-container horizontal-stretch">
+          <img src="./images/fateme-alaie-hT1BAWPBpEo-unsplash.jpg" alt="" srcset="">
+        </div>
+      </div>
+    </section>
+  
+    <section id="heads-section">
+      <div class="heads-section-title">
+        <span>Our Heads</span>
+      </div>
+      <div class="container-heads">
+        <div class="heads-cards">
+          <div class="heads-desc">
+            <span class="head-name">Lorem Ipsum</span>
+            <p class="card-heads-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit
+            </p>
+          </div>
+          <div class="heads-img">
+            <img src="./images/heads.png" />
+          </div>
+        </div>
+  
+        <div class="heads-cards">
+          <div class="heads-desc">
+            <span class="head-name">Lorem Ipsum</span>
+            <p class="card-heads-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit
+            </p>
+          </div>
+          <div class="heads-img">
+            <img src="./images/heads.png" />
+          </div>
+        </div>
+  
+        <div class="heads-cards">
+          <div class="heads-desc">
+            <span class="head-name">Lorem Ipsum</span>
+            <p class="card-heads-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit
+            </p>
+          </div>
+          <div class="heads-img">
+            <img src="./images/heads.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('./components/footer/footer.ejs') -%>
+    <script src="/scripts/test/test.js" type="module"></script>
+    <script src="/scripts/navbar/script.js" type="module"></script>
+  </body>
+</html>
