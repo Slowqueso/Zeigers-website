@@ -439,9 +439,16 @@ nav.scrolled {
   color: white;
   text-align: center;
 }
-@media (max-width: 380px){
-  .tech_event_title{
+@media (max-width: 380px) {
+  .tech_event_title {
     font-size: 3em;
     justify-content: center;
+  }
+}
+
+@media screen and (width: 1920px) {
+  .explore-btn {
+    bottom: 50% !important;
+    left: 80% !important;
   }
 }

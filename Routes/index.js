@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import path from "path";
 import connectDB from "../config/db.js";
-import { checkUser, requireAuth } from "../middlewares.js/authMiddleware.js";
+import { checkUser, preLoginCheck, requireAuth } from "../middlewares.js/authMiddleware.js";
 const __dirname = path.resolve();
 
 dotenv.config();
@@ -31,15 +31,15 @@ router.get("/test", (req, res) => {
 router.get("/Home", (req, res) => {
   res.status(200).render(path.join(__dirname, "Views", "index"));
 });
-router.get("/Login", (req, res) => {
+router.get("/Login",preLoginCheck, (req, res) => {
   res.status(200).render(path.join(__dirname, "Views", "login"));
 });
-router.get("/SignUp", (req, res) => {
+router.get("/SignUp",preLoginCheck, (req, res) => {
   res.status(200).render(path.join(__dirname, "Views", "signup"));
 });
 
-router.get("/api/participate", requireAuth, (req, res) => {
-  res.status(200).render(path.join(__dirname, "Views", "components", "header"));
+router.get("/Riddler", requireAuth, (req, res) => {
+  res.status(200).render(path.join(__dirname, "Views", "riddler"));
 });
 
 router.get("/Games/Valorant", (req, res) => {

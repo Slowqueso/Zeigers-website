@@ -40,4 +40,18 @@ const checkUser = (req, res, next) => {
   }
 };
 
-export {requireAuth,checkUser}
+
+//post login
+
+const preLoginCheck = (req, res, next) => {
+  const token = req.cookies.jwt;
+  if (!token) {
+    
+    next();
+  } else {
+    res.redirect('/Home')
+    
+  }
+};
+
+export {requireAuth,checkUser,preLoginCheck}
