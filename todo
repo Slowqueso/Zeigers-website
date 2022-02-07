@@ -1,31 +1,9 @@
-=> Login Page button spacing
-
-=> form validation
-
-=> Cards Re-work
-
-=> Texts Unselectable
-
 => TechNutz Rounds <-> Levels, Bingo Blitz line 3 (the),
 
-=> 512x643 photo gallery
-
-=> BGMI TDM banner image update
-
 => Games> Lobby Rules: "Discord"
-
-=> Nav scroll removal - R done
-
-=> Gaming Page (414x896) - R done
-
-(414x896) All page responsive check - R
 
 (390x585) All pages - R
 
 (414x736) All pages responsive check - R
 
-(1920x1080) All pages responsive check - R done
-
-Protected Pages: Post Login > Login and Sign Up. Pre Login > Riddler - R done
-
-Safari: - Landing Page > Gaming Banner z-index fix - Navbar z-index: 100, scroll removal - Photo Gallery grid
+Safari: - Landing Page > Gaming Banner z-index fix, Photo Gallery grid
