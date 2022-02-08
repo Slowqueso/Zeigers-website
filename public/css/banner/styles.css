@@ -93,6 +93,7 @@
     overflow-x: hidden !important;
   }
   #gaming #joystick {
+    display: none;
     height: 200px;
     width: auto;
     transform: translateY(-100%);
