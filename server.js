@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import router from "./Routes/index.js";
 import userRoutes from "./Routes/userRoutes.js";
+import riddlerRoutesTest from "./Routes/riddlerRoutesTest.js"
 import cookieParser from "cookie-parser";
 import ejs from 'ejs';
 
@@ -30,6 +31,8 @@ app.set("view engine", "ejs");
 //Custom Middleware
 app.use(router);
 app.use("/api", userRoutes);
+app.use("/api", riddlerRoutesTest );
+
 
 //Web Server Connection
 app.listen(port, () => console.log(`listening to port: ${port}`));
