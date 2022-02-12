@@ -104,8 +104,9 @@ section {
   );
   max-width: 6cm;
   width: 100%;
-  margin: auto;
+  margin: 0rem auto;
   border-radius: 5px;
+  transition: 1s ease-in;
 }
 .banner-button div {
   display: flex;
@@ -122,4 +123,12 @@ section {
   font-size: 16px;
   width: 100%;
   text-align: center;
+}
+.banner-button:hover{
+  cursor: url("/Assets/svgs/cursor.cur"), auto;
+  background-image: linear-gradient(-90deg,rgba(144, 159, 214, 1),rgba(144,159,214,1));
+}
+.banner-button:hover div{
+  cursor: url("/Assets/svgs/cursor.cur"), auto;
+  background-image: linear-gradient(-90deg,rgba(144, 159, 214, 1),rgba(144,159,214,1));
 }

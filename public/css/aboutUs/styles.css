@@ -21,6 +21,7 @@
     font-size: 8rem;
     text-align: center;
     font-family: var(--fs-josef-600);
+    text-shadow: 10px 1px black;
 }
 #moon{
     position: fixed;

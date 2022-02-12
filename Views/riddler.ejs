@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/header/header.css" />
     <link rel="stylesheet" href="/css/aboutUs/styles.css">
     <link rel="shortcut icon" href="/Assets/svgs/logo_icon.ico" />
+    <link rel="stylesheet" href="/css/riddler/styles.css">
     <title>Riddler</title>
 </head>
 <body>
@@ -18,13 +19,12 @@
   ></canvas>
   <img src="/Assets/svgs/spaceship.svg" alt="" id="spaceship">
   <img src="/Assets/svgs/moon.svg" alt="" id="moon">
-  <header class="aboutUs-header">
+  <header>
     <%- include('./components/navbar/navbar.ejs') -%>
-    <div class="flex-column">
-        <h1 class="header-title">????</h1>
-      </div>
+    <%- include('./components/riddler/header.ejs') -%>
   </header>
   <script src="/scripts/test/test.js" type="module"></script>
     <script src="/scripts/navbar/script.js" type="module"></script>
+    <script src="/scripts/riddler/index.js" type="module"></script>
 </body>
 </html>
