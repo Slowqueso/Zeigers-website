@@ -4,7 +4,14 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import path from "path";
 import connectDB from "../config/db.js";
-import { checkUser, preLoginCheck, requireAuth } from "../middlewares.js/authMiddleware.js";
+import asyncHandler from "express-async-handler";
+import Riddler from "../models/riddlerResponse.js";
+import Questions from "../questions/Questions.js";
+import {
+  checkUser,
+  preLoginCheck,
+  requireAuth,
+} from "../middlewares.js/authMiddleware.js";
 const __dirname = path.resolve();
 
 dotenv.config();
@@ -22,25 +29,49 @@ connectDB();
 
 //API Endpoints
 router.get("*", checkUser);
-router.get("/",(req,res)=>{
-  res.status(200).render(path.join(__dirname,"Views","index"));
-})
+router.get("/", (req, res) => {
+  res.status(200).render(path.join(__dirname, "Views", "index"));
+});
 router.get("/test", (req, res) => {
   res.status(200).render(path.join(__dirname, "Views", "components", "header"));
 });
 router.get("/Home", (req, res) => {
   res.status(200).render(path.join(__dirname, "Views", "index"));
 });
-router.get("/Login",preLoginCheck, (req, res) => {
+router.get("/Login", preLoginCheck, (req, res) => {
   res.status(200).render(path.join(__dirname, "Views", "login"));
 });
-router.get("/SignUp",preLoginCheck, (req, res) => {
+router.get("/SignUp", preLoginCheck, (req, res) => {
   res.status(200).render(path.join(__dirname, "Views", "signup"));
 });
 
-router.get("/Riddler", requireAuth, (req, res) => {
-  res.status(200).render(path.join(__dirname, "Views", "riddler"));
+router.get(
+  "/devRiddler",
+  requireAuth,
+  checkUser,
+  asyncHandler(async (req, res) => {
+    const { _id } = res.locals.user;
+    const responseObject = await Riddler.findOne({ "user._id": _id });
+    if (responseObject) {
+      const { progress } = responseObject;
+      res.status(200).render(path.join(__dirname, "Views", "riddler"), {
+        progress,
+        questions: Questions,
+      });
+    } else {
+      res
+        .status(200)
+        .render(path.join(__dirname, "Views", "riddler"), { progress: 0 });
+    }
+  })
+);
+router.get("/Riddler", (req, res) => {
+  res.render(path.join(__dirname, "Views", "suspense"));
 });
+// Riddler-1-hint-4
+// Riddler-1-hint-3
+// Riddler-1-hint-2
+// Riddler-1-hint-1
 
 router.get("/Games/Valorant", (req, res) => {
   res.status(200).render(path.join(__dirname, "Views", "valorant"));
@@ -62,20 +93,20 @@ router.get("/Events/WebDesign", (req, res) => {
   res.status(200).render(path.join(__dirname, "Views", "webDev"));
 });
 
-router.get("/Games/Checkmate", (req,res)=>{
+router.get("/Games/Checkmate", (req, res) => {
   res.status(200).render(path.join(__dirname, "Views", "chess"));
-})
+});
 
-router.get("/Games/RocketLeague", (req, res)=>{
-  res.status(200).render(path.join(__dirname,"Views", "rocketLeague"));
-})
+router.get("/Games/RocketLeague", (req, res) => {
+  res.status(200).render(path.join(__dirname, "Views", "rocketLeague"));
+});
 
-router.get("/Events/TechNutz", (req,res)=>{
+router.get("/Events/TechNutz", (req, res) => {
   res.status(200).render(path.join(__dirname, "Views", "techNutz"));
-})
+});
 
-router.get("/Games/BGMI", (req,res)=>{
+router.get("/Games/BGMI", (req, res) => {
   res.status(200).render(path.join(__dirname, "Views", "bgmi"));
-})
+});
 //export
 export default router;

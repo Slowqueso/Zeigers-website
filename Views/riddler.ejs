@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/header/header.css" />
-    <link rel="stylesheet" href="/css/aboutUs/styles.css">
-    <link rel="shortcut icon" href="/Assets/svgs/logo_icon.ico" />
-    <link rel="stylesheet" href="/css/riddler/styles.css">
-    <title>Riddler</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/header/header.css" />
+  <link rel="stylesheet" href="/css/aboutUs/styles.css">
+  <link rel="shortcut icon" href="/Assets/svgs/logo_icon.ico" />
+  <link rel="stylesheet" href="/css/riddler/styles.css">
+  <title>Riddler</title>
 </head>
+
 <body>
 
-    <canvas
-    class="canvas"
-    style="width: 100%; height: 100%; position: fixed; z-index: -2;"
-    id="canvas"
-  ></canvas>
+  <canvas class="canvas" style="width: 100%; height: 100%; position: fixed; z-index: -2;" id="canvas"></canvas>
   <img src="/Assets/svgs/spaceship.svg" alt="" id="spaceship">
   <img src="/Assets/svgs/moon.svg" alt="" id="moon">
-  <header>
-    <%- include('./components/navbar/navbar.ejs') -%>
-    <%- include('./components/riddler/header.ejs') -%>
-  </header>
-  <script src="/scripts/test/test.js" type="module"></script>
-    <script src="/scripts/navbar/script.js" type="module"></script>
-    <script src="/scripts/riddler/index.js" type="module"></script>
+
+  <% if(progress> 0) { %>
+    <header>
+      <%- include('./components/navbar/navbar.ejs') -%>
+        <h1 class="header-title">Question Number: <%= progress %>
+
+        </h1>
+
+    </header>
+    <%- include('./components/riddler/rulebook.ejs') -%>
+      <% } else { %>
+        <header>
+          <%- include('./components/navbar/navbar.ejs') -%>
+            <%- include('./components/riddler/header.ejs') -%>
+              <%- include('./components/riddler/rulebook.ejs') -%>
+        </header>
+        <% } %>
+          <script src="/scripts/test/test.js" type="module"></script>
+          <script src="/scripts/navbar/script.js" type="module"></script>
+          <script src="/scripts/riddler/index.js" type="module"></script>
 </body>
+
 </html>
