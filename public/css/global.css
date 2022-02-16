@@ -43,6 +43,8 @@ body {
   margin: 0px;
   width: 100%;
   padding: 0px;
+  outline: none;
+  border: none;
   /* overflow-x: hidden; */
 }
 a {
@@ -77,6 +79,7 @@ section {
   display: flex;
   align-items: center;
 }
+
 .button:hover {
   cursor: pointer;
   background-color: var(--palette-mediumPurple);
@@ -124,11 +127,19 @@ section {
   width: 100%;
   text-align: center;
 }
-.banner-button:hover{
+.banner-button:hover {
   cursor: url("/Assets/svgs/cursor.cur"), auto;
-  background-image: linear-gradient(-90deg,rgba(144, 159, 214, 1),rgba(144,159,214,1));
+  background-image: linear-gradient(
+    -90deg,
+    rgba(144, 159, 214, 1),
+    rgba(144, 159, 214, 1)
+  );
 }
-.banner-button:hover div{
+.banner-button:hover div {
   cursor: url("/Assets/svgs/cursor.cur"), auto;
-  background-image: linear-gradient(-90deg,rgba(144, 159, 214, 1),rgba(144,159,214,1));
+  background-image: linear-gradient(
+    -90deg,
+    rgba(144, 159, 214, 1),
+    rgba(144, 159, 214, 1)
+  );
 }

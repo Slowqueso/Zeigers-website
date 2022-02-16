@@ -27,3 +27,79 @@ if (start_game) {
     }
   });
 }
+
+const hints = document.querySelectorAll(".hint");
+const question = document.querySelector(".question");
+const answer = document.querySelector("#answer");
+let question_number = 0;
+if (question) {
+  question_number = question.getAttribute("question_number");
+  const loadProgress = async () => {
+    try {
+      const data = {
+        question_number: parseInt(question_number),
+        hint: {
+          number: 1,
+          status: true,
+        },
+      };
+      const res = await fetch("/api/saveProgress", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  loadProgress();
+}
+if (question) {
+  question.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    try {
+      const data = {
+        question_number: parseInt(question.getAttribute("question_number")),
+        answer: answer.value,
+      };
+      const res = await fetch("/api/responseSubmit", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (res) {
+        document.location.reload();
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  });
+}
+
+hints.forEach((hint) => {
+  hint.addEventListener("click", async () => {
+    const hint_number = hint.getAttribute("hint_number");
+    const hint_status = hint.getAttribute("hint_status");
+    if (!hint_status) {
+      try {
+        const data = {
+          question_number: parseInt(question_number),
+          hint: {
+            number: parseInt(hint_number),
+            status: true,
+          },
+        };
+        const res = await fetch("/api/saveProgress", {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        hint.classList.remove("hidden");
+        hint.setAttribute("hint_status", "true");
+        hint.innerHTML = `<img src="/Assets/riddler/Riddler-${question_number}-hint-${hint_number}.png" alt="">`;
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  });
+});

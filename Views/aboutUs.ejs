@@ -1,370 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/header/header.css" />
-    <link rel="stylesheet" href="/css/aboutUs/styles.css">
-    <link rel="shortcut icon" href="/Assets/svgs/logo_icon.ico" />
-    <title>Ziegers - About Us</title>
-  </head>
-  <body style="max-width: 100%; overflow-x: hidden;">
-    <canvas
-      class="canvas"
-      style="width: 100%; height: 100%; position: fixed; z-index: -2;"
-      id="canvas"
-    ></canvas>
-    <img src="/Assets/svgs/spaceship.svg" alt="" id="spaceship">
-    <img src="/Assets/svgs/moon.svg" alt="" id="moon">
-    <header class="aboutUs-header">
-      <%- include('./components/navbar/navbar.ejs') -%>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/header/header.css" />
+  <link rel="stylesheet" href="/css/aboutUs/styles.css">
+  <link rel="shortcut icon" href="/Assets/svgs/logo_icon.ico" />
+  <title>Ziegers - About Us</title>
+</head>
+
+<body style="max-width: 100%; overflow-x: hidden;">
+  <canvas class="canvas" style="width: 100%; height: 100%; position: fixed; z-index: -2;" id="canvas"></canvas>
+  <img src="/Assets/svgs/spaceship.svg" alt="" id="spaceship">
+  <img src="/Assets/svgs/moon.svg" alt="" id="moon">
+  <header class="aboutUs-header">
+    <%- include('./components/navbar/navbar.ejs') -%>
       <div class="flex-column">
         <img src="/Assets/svgs/logo.svg" alt="">
         <h1 class="header-title">Ziegers 2022</h1>
       </div>
-    </header>
-    <section class="trailer-container">
-      <div class="trailer-section-title">
-        <span>Trailer</span>
+  </header>
+  <section class="trailer-container">
+    <div class="trailer-section-title">
+      <span>Trailer</span>
+    </div>
+    <div class="tablet">
+      <div class="tablet-frame">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/k_ebI2MAuhs" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
-      <div class="tablet">
-        <div class="tablet-frame">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/k_ebI2MAuhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="tablet-btn"></div>
-      </div>
-    </section>
-  
-    <section id="event-section">
-      <div class="event-section-title">
-          <span>Our Events</span>
-      </div>
-      <div class="event-container container-1">
-          <img src="/Assets/images/codeXLogo.png" alt="" srcset="">
-          <div class="event-content">
-              <h3>CODEX</h3>
-              <p>This is your one stop shop for everything related to coding
-                CodeX is a competitive programming platform where beginners can learn alot by their basic algorithm tests
-                whereas the experts can show their talent through coding.</p>
-          </div>
-      </div>
-  
-      <div class="event-container container-2">
-          <img src="/Assets/images/web_dev_logo.png" alt="" srcset="">
-          <div class="event-content">
-              <h3>WEB DESIGN</h3>
-              <p>Time has finally come to give a life to your designing ideas and
-                showcase your amazing talent ,so join our website designing event and
-                exhibit all your creativity. Afterall Website designing is nothing but a
-                form of painting ...except it never dries !! What are you waiting for
-                ... Go on unleash your ideas and design a masterpiece !!
-                <br /><br />
-                Remember , In this event you have to design a website using any platform
-                mentioned in the rulebook below. Time limit would be of 2 hours and the
-                participant who designs the best web site will be rewarded with a cash
-                prize provided if they follow all the rules mentioned in the rulebook.</p>
-          </div>
-      </div>
-  
-      <div class="event-container container-1" >
-          <img src="/Assets/svgs/techNutzLogo.svg" alt="" srcset="">
-          <div class="event-content">
-              <h3>TECHNUTZ</h3>
-              <p>Be quick and shout it out right,
-                let the quizophile in you win this fight! <br>
-                Want to have fun and scratch your head with riddles and amazing trivia? Technutz is here to take you through a journey of fun and knowledge.</p>
-          </div>
-      </div>
-  
-      <div class="event-container container-2">
-          <img src="/Assets/images/astro-gamepad.png" alt="" srcset="">
-          <div class="event-content">
-              <h3>GAMING</h3>
-              <p> Experiment a unique experience because different gamer personalities can mingle with their fellow gamers, and most importantly, show them who is a cut above the rest! <br> <br>
-                So be ready to call your Teammates and flank on Enemies house , checkmate your opponent, defend your Goal Post or plant your spike!</p>
-          </div>
-      </div>
+      <div class="tablet-btn"></div>
+    </div>
   </section>
-  
-    <section id="photoGallery">
-      <div class="photogallery-section-title">
-        <span>Photo Gallery</span>
+
+  <section id="event-section">
+    <div class="event-section-title">
+      <span>Our Events</span>
+    </div>
+    <div class="event-container container-1">
+      <img src="/Assets/images/codeXLogo.png" alt="" srcset="">
+      <div class="event-content">
+        <h3>CODEX</h3>
+        <p>This is your one stop shop for everything related to coding
+          CodeX is a competitive programming platform where beginners can learn alot by their basic algorithm tests
+          whereas the experts can show their talent through coding.</p>
       </div>
-      <div class="photos-container">
-        <div class="img-container">
-          <img src="/Assets/gallery/astronatuthumbnail.png" alt="" srcset="">
+    </div>
+
+    <div class="event-container container-2">
+      <img src="/Assets/images/web_dev_logo.png" alt="" srcset="">
+      <div class="event-content">
+        <h3>WEB DESIGN</h3>
+        <p>Time has finally come to give a life to your designing ideas and
+          showcase your amazing talent ,so join our website designing event and
+          exhibit all your creativity. Afterall Website designing is nothing but a
+          form of painting ...except it never dries !! What are you waiting for
+          ... Go on unleash your ideas and design a masterpiece !!
+          <br /><br />
+          Remember , In this event you have to design a website using any platform
+          mentioned in the rulebook below. Time limit would be of 2 hours and the
+          participant who designs the best web site will be rewarded with a cash
+          prize provided if they follow all the rules mentioned in the rulebook.
+        </p>
+      </div>
+    </div>
+
+    <div class="event-container container-1">
+      <img src="/Assets/svgs/techNutzLogo.svg" alt="" srcset="">
+      <div class="event-content">
+        <h3>TECHNUTZ</h3>
+        <p>Be quick and shout it out right,
+          let the quizophile in you win this fight! <br>
+          Want to have fun and scratch your head with riddles and amazing trivia? Technutz is here to take you through a
+          journey of fun and knowledge.</p>
+      </div>
+    </div>
+
+    <div class="event-container container-2">
+      <img src="/Assets/images/astro-gamepad.png" alt="" srcset="">
+      <div class="event-content">
+        <h3>GAMING</h3>
+        <p> Experiment a unique experience because different gamer personalities can mingle with their fellow gamers,
+          and most importantly, show them who is a cut above the rest! <br> <br>
+          So be ready to call your Teammates and flank on Enemies house , checkmate your opponent, defend your Goal Post
+          or plant your spike!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="photoGallery">
+    <div class="photogallery-section-title">
+      <span>Photo Gallery</span>
+    </div>
+    <div class="photos-container">
+      <div class="img-container">
+        <img src="/Assets/gallery/astronatuthumbnail.png" alt="" srcset="">
+      </div>
+      <div class="img-container horizontal-stretch">
+        <img src="/Assets/gallery/groupPic.jpeg" alt="" srcset="">
+      </div>
+      <div class="img-container">
+        <img src="/Assets/gallery/Thumbnail2021.png" alt="" srcset="">
+      </div>
+      <div class="img-container">
+        <img src="/Assets/gallery/poster.jpeg" alt="" srcset="">
+      </div>
+      <div class="img-container">
+        <img src="/Assets/gallery/tnCodeX.jpeg" alt="" srcset="">
+      </div>
+      <div class="img-container">
+        <img src="/Assets/gallery/volunteers.jpeg" alt="" srcset="">
+      </div>
+      <div class="img-container horizontal-stretch">
+        <img src="/Assets/gallery/goodPic.png" alt="" srcset="">
+      </div>
+      <div class="img-container">
+        <img src="/Assets/gallery/funPic.jpeg" alt="" srcset="">
+      </div>
+      <div class="img-container horizontal-stretch">
+        <img src="/Assets/gallery/ziegers20.png" alt="" srcset="">
+      </div>
+    </div>
+  </section>
+
+  <section id="heads-section">
+    <div class="heads-section-title">
+      <span>Our Heads</span>
+    </div>
+    <div class="container-heads">
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Rishikesh Nambiar</span>
+          <p class="card-heads-body">
+            Chairperson, TechNutz Co-Head.
+          </p>
         </div>
-        <div class="img-container horizontal-stretch">
-          <img src="/Assets/gallery/groupPic.jpeg" alt="" srcset="">
-        </div>
-        <div class="img-container">
-          <img src="/Assets/gallery/Thumbnail2021.png" alt="" srcset="">
-        </div>
-        <div class="img-container">
-          <img src="/Assets/gallery/poster.jpeg" alt="" srcset="">
-        </div>
-        <div class="img-container">
-          <img src="/Assets/gallery/tnCodeX.jpeg" alt="" srcset="">
-        </div>
-        <div class="img-container">
-          <img src="/Assets/gallery/volunteers.jpeg" alt="" srcset="">
-        </div>
-        <div class="img-container horizontal-stretch">
-          <img src="/Assets/gallery/goodPic.png" alt="" srcset="">
-        </div>
-        <div class="img-container">
-          <img src="/Assets/gallery/funPic.jpeg" alt="" srcset="">
-        </div>
-        <div class="img-container horizontal-stretch">
-          <img src="/Assets/gallery/ziegers20.png" alt="" srcset="">
+        <div class="heads-img">
+          <img src="/Assets/heads/RISHIKESH.png" />
         </div>
       </div>
-    </section>
-  
-    <section id="heads-section">
-      <div class="heads-section-title">
-        <span>Our Heads</span>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Soham Hegde</span>
+          <p class="card-heads-body">
+            Vice-Chairperson, Sponsorships Head.
+          </p>
+        </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Soham.png" />
+        </div>
       </div>
-      <div class="container-heads">
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Rishikesh Nambiar</span>
-            <p class="card-heads-body">
-              Chairperson, TechNutz Co-Head.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/RISHIKESH.png" />
-          </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Harish Murugesan</span>
+          <p class="card-heads-body">
+            Sponsorships Co-Head.
+          </p>
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Soham Hegde</span>
-            <p class="card-heads-body">
-              Vice-Chairperson, Sponsorships Head.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Soham.png" />
-          </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Harish.png" />
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Harish Murugesan</span>
-            <p class="card-heads-body">
-              Sponsorships Co-Head.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Harish.png" />
-          </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Devika Nambiar</span>
+          <p class="card-heads-body">
+            Web Design Head.
+          </p>
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Devika Nambiar</span>
-            <p class="card-heads-body">
-              Web Design Head.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Devika.png" />
-          </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Devika.png" />
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Kartik Ranjan</span>
-            <p class="card-heads-body">
-              Web Design Co-Head.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/testImage.png" />
-          </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Kartik Ranjan</span>
+          <p class="card-heads-body">
+            Web Design Co-Head.
+          </p>
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Rahul Chauhan</span>
-            <p class="card-heads-body">
-              Web Design Co-ordinator.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Rahul.png" />
-          </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/testImage.png" />
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Ankush Roy Chowdhury</span>
-            <p class="card-heads-body">
-              Digitals & Design Head.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Ankush.png" />
-          </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Rahul Chauhan</span>
+          <p class="card-heads-body">
+            Web Design Co-ordinator.
+          </p>
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Arun Kanjoor</span>
-            <p class="card-heads-body">
-              Digitals & Design Co-Head.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Arun.png" />
-          </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Rahul.png" />
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Tanisha Mahata</span>
-            <p class="card-heads-body">
-              Digitals & Design Co-ord.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Tanisha.png" />
-          </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Ankush Roy Chowdhury</span>
+          <p class="card-heads-body">
+            Digitals & Design Head.
+          </p>
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Gayatri Dalvi</span>
-            <p class="card-heads-body">
-              TechNutz Head
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Gayatri.png" />
-          </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Ankush.png" />
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Rishikesh Nambiar</span>
-            <p class="card-heads-body">
-              Chairperson, TechNutz Co-Head.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/RISHIKESH.png" />
-          </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Arun Kanjoor</span>
+          <p class="card-heads-body">
+            Digitals & Design Co-Head.
+          </p>
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Ashitha Nair</span>
-            <p class="card-heads-body">
-              TechNutz Co-ordinator.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Ashitha.png" />
-          </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Arun.png" />
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Tejas Kale</span>
-            <p class="card-heads-body">
-              Gaming Head
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Tejas.png" />
-          </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Tanisha Mahata</span>
+          <p class="card-heads-body">
+            Digitals & Design Co-ord.
+          </p>
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Kevin John</span>
-            <p class="card-heads-body">
-              Gaming Co-Head
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Kevin.png" />
-          </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Tanisha.png" />
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Devendra Maurya</span>
-            <p class="card-heads-body">
-              Gaming Co-ord.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/devendro.png" />
-          </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Gayatri Dalvi</span>
+          <p class="card-heads-body">
+            TechNutz Head
+          </p>
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Shreeju Acharya</span>
-            <p class="card-heads-body">
-              PR Head.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/shreeju.png" />
-          </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Gayatri.png" />
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Dona Biju</span>
-            <p class="card-heads-body">
-              PR Co-Head.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/dona.png" />
-          </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Rishikesh Nambiar</span>
+          <p class="card-heads-body">
+            Chairperson, TechNutz Co-Head.
+          </p>
         </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Sachin Nadar</span>
-            <p class="card-heads-body">
-              PR Co-ordinator.
-            </p>
-          </div>
-          
-          <div class="heads-img">
-            <img src="/Assets/heads/Sachin.png" />
-          </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/RISHIKESH.png" />
+        </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Ashitha Nair</span>
+          <p class="card-heads-body">
+            TechNutz Co-ordinator.
+          </p>
+        </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Ashitha.png" />
+        </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Tejas Kale</span>
+          <p class="card-heads-body">
+            Gaming Head
+          </p>
+        </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Tejas.png" />
+        </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Kevin John</span>
+          <p class="card-heads-body">
+            Gaming Co-Head
+          </p>
+        </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Kevin.png" />
+        </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Devendra Maurya</span>
+          <p class="card-heads-body">
+            Gaming Co-ord.
+          </p>
+        </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/devendro.png" />
+        </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Shreeju Acharya</span>
+          <p class="card-heads-body">
+            PR Head.
+          </p>
+        </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/shreeju.png" />
+        </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Dona Biju</span>
+          <p class="card-heads-body">
+            PR Co-Head.
+          </p>
+        </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/dona.png" />
+        </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Sachin Nadar</span>
+          <p class="card-heads-body">
+            PR Co-ordinator.
+          </p>
         </div>
 
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Anusaranya Selvam</span>
-            <p class="card-heads-body">
-              CodeX Head.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Anu.png" />
-          </div>
-        </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Vishnu Udaiyar</span>
-            <p class="card-heads-body">
-              CodeX Co-Head.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Vishnu.png" />
-          </div>
-        </div>
-        <div class="heads-cards">
-          <div class="heads-desc">
-            <span class="head-name">Gladys Devadasan</span>
-            <p class="card-heads-body">
-              CodeX Co-ordinator.
-            </p>
-          </div>
-          <div class="heads-img">
-            <img src="/Assets/heads/Gladys.png" />
-          </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Sachin.png" />
         </div>
       </div>
-    </section>
 
-    <%- include('./components/footer/footer.ejs') -%>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Anusaranya Selvam</span>
+          <p class="card-heads-body">
+            CodeX Head.
+          </p>
+        </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Anu.png" />
+        </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Vishnu Udaiyar</span>
+          <p class="card-heads-body">
+            CodeX Co-Head.
+          </p>
+        </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Vishnu.png" />
+        </div>
+      </div>
+      <div class="heads-cards">
+        <div class="heads-desc">
+          <span class="head-name">Gladys Devadasan</span>
+          <p class="card-heads-body">
+            CodeX Co-ordinator.
+          </p>
+        </div>
+        <div class="heads-img">
+          <img src="/Assets/heads/Gladys.png" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('./components/footer/footer.ejs') -%>
     <script src="/scripts/test/test.js" type="module"></script>
     <script src="/scripts/navbar/script.js" type="module"></script>
-  </body>
+</body>
+
 </html>

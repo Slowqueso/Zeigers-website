@@ -21,13 +21,12 @@ const riddlerSchema = mongoose.Schema(
       {
         question_number: {
           type: Number,
-          default: 0,
         },
         hint: [
           {
             number: {
               type: Number,
-              default: null,
+              default: 1,
               required: true,
             },
             status: {

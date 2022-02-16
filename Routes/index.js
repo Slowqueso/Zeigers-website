@@ -54,14 +54,62 @@ router.get(
     const responseObject = await Riddler.findOne({ "user._id": _id });
     if (responseObject) {
       const { progress } = responseObject;
+      const { questions } = responseObject;
+      let hints = null;
+      if (questions[progress - 1]) {
+        hints = questions[progress - 1].hint;
+        res.status(200).render(path.join(__dirname, "Views", "riddler"), {
+          progress,
+          questions: Questions,
+          hints: [
+            {
+              number: 1,
+              status: true,
+            },
+            {
+              number: 2,
+              status: hints[1] ? hints[1].status : false,
+            },
+            {
+              number: 3,
+              status: hints[2] ? hints[2].status : false,
+            },
+            {
+              number: 4,
+              status: hints[3] ? hints[3].status : false,
+            },
+          ],
+        });
+      } else {
+        hints = [
+          {
+            number: 1,
+            status: true,
+          },
+          {
+            number: 2,
+            status: false,
+          },
+          {
+            number: 3,
+            status: false,
+          },
+          {
+            number: 4,
+            status: false,
+          },
+        ];
+        res.status(200).render(path.join(__dirname, "Views", "riddler"), {
+          progress,
+          questions: Questions,
+          hints,
+        });
+      }
+    } else {
       res.status(200).render(path.join(__dirname, "Views", "riddler"), {
-        progress,
+        progress: 0,
         questions: Questions,
       });
-    } else {
-      res
-        .status(200)
-        .render(path.join(__dirname, "Views", "riddler"), { progress: 0 });
     }
   })
 );

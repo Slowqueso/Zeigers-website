@@ -1,27 +1,35 @@
 const QuestionObject = [
   {
     question_number: 1,
-    answer: "xyz",
+    answer: "shakespeare",
   },
   {
     question_number: 2,
-    answer: "abc",
+    answer: "amazon",
   },
   {
     question_number: 3,
-    answer: "def",
+    answer: "germany",
   },
   {
     question_number: 4,
-    answer: "xyz",
+    answer: "android",
   },
   {
     question_number: 5,
-    answer: "xyz",
+    answer: "egypt",
   },
   {
     question_number: 6,
-    answer: "xyz",
+    answer: "isro",
+  },
+  {
+    question_number: 7,
+    answer: "tata",
+  },
+  {
+    question_number: 8,
+    answer: "interstellar",
   },
 ];
 

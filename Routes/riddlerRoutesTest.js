@@ -18,23 +18,16 @@ router.post(
   asyncHandler(async (req, res) => {
     const { phone, email, name, _id } = res.locals.user;
 
-    const userExist1 = await Riddler.findOne({ email });
-    const userExist2 = await Riddler.findOne({ phone });
-
-    if (userExist1 || userExist2) {
-      res.status(400).json({ error: "Please Resume where you paused" });
-    } else {
-      const user = { phone, email, name, _id };
+    const user = { phone, email, name, _id };
+    try {
       const riddlerResponse = await Riddler.create({
         user: user,
         progress: 1,
       });
-      if (riddlerResponse) {
-        res.status(201).json(riddlerResponse);
-      } else {
-        res.status(400);
-        res.json({ error: "Invalid User Data" });
-      }
+      res.status(201).json(riddlerResponse);
+    } catch (err) {
+      res.status(400);
+      console.log(err);
     }
   })
 );
@@ -50,10 +43,9 @@ router.put(
     const { _id } = res.locals.user;
     const { answer } = req.body;
     const { question_number } = req.body;
-
     const responseObject = await Riddler.findOne({ "user._id": _id });
     if (responseObject) {
-      if (responseObject.progress < 10) {
+      if (responseObject.progress <= QuestionObject.length) {
         const answerValidation = QuestionObject[question_number - 1].answer;
         let points = 0;
         if (answer.toLowerCase() === answerValidation) {
@@ -74,6 +66,8 @@ router.put(
               points: 10 + points,
             },
           });
+          responseObject.totalPoints =
+            responseObject.totalPoints + (10 + points);
         } else {
           responseObject.answers.push({
             question: {
@@ -82,11 +76,9 @@ router.put(
               points: 0,
             },
           });
+          responseObject.totalPoints = responseObject.totalPoints;
         }
-        let thisPoints = 10 + points;
-        responseObject.totalPoints = responseObject.totalPoints + thisPoints;
-        responseObject.progress =
-          responseObject.answers.length || responseObject.progress; //updating progress
+        responseObject.progress = responseObject.progress + 1; //updating progress
         const updatedAnswer = await responseObject.save();
         res.status(201).json(updatedAnswer);
       } else {
@@ -116,14 +108,27 @@ router.put(
     })
       .then((responseObject) => {
         if (responseObject) {
-          if (responseObject.progress < 10) {
+          if (responseObject.progress <= QuestionObject.length) {
             const index = responseObject.questions
               .map((question) => {
                 return question.question_number;
               })
               .indexOf(question_number);
-            responseObject.questions[index].hint = hint;
+            if (responseObject.questions[index].hint[1]) {
+              responseObject.questions[index].hint[hint.number - 1] = hint;
+            } else {
+              responseObject.questions[index].hint =
+                [
+                  { number: 1, status: true },
+                  { status: false },
+                  { status: false },
+                  { status: false },
+                ] || responseObject.questions[index].hint;
+              responseObject.questions[index].hint[hint.number - 1] = hint;
+            }
+            // responseObject.questions[index].hint.push(hint);
             responseObject.save();
+            res.json("Saved");
           } else {
             res.json("Game Completed");
           }
