@@ -46,7 +46,7 @@ router.get("/SignUp", preLoginCheck, (req, res) => {
 });
 
 router.get(
-  "/devRiddler",
+  "/Riddler",
   requireAuth,
   checkUser,
   asyncHandler(async (req, res) => {
@@ -113,7 +113,7 @@ router.get(
     }
   })
 );
-router.get("/Riddler", (req, res) => {
+router.get("/devRiddler", (req, res) => {
   res.render(path.join(__dirname, "Views", "suspense"));
 });
 // Riddler-1-hint-4
