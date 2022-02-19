@@ -17,7 +17,7 @@
   <img src="/Assets/svgs/spaceship.svg" alt="" id="spaceship">
   <img src="/Assets/svgs/moon.svg" alt="" id="moon">
   <% if(progress> 0) { %>
-    <% if(progress < 12 ) { %>
+    <% if(progress < questions.length + 1 ) { %>
       <header class="questions">
         <%- include('./components/navbar/navbar.ejs') -%>
           <h1 class="question_number unselectable">
