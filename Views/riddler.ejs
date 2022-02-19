@@ -17,12 +17,15 @@
   <img src="/Assets/svgs/spaceship.svg" alt="" id="spaceship">
   <img src="/Assets/svgs/moon.svg" alt="" id="moon">
   <% if(progress> 0) { %>
-    <% if(progress < 9 ) { %>
+    <% if(progress < 12 ) { %>
       <header class="questions">
         <%- include('./components/navbar/navbar.ejs') -%>
           <h1 class="question_number unselectable">
+
             Riddle Number: <%= progress %>
           </h1>
+          <img src="/Assets/svgs/happy_emoji.svg" id="status_emoji" alt="">
+          <!-- <h3 id="error_text"></h3> -->
       </header>
       <form question_number="<%= progress %>" class="question">
         <div class="flex-container">
@@ -70,8 +73,9 @@
       <% } else { %>
         <header class="questions" style="min-height: 80vh;">
           <%- include('./components/navbar/navbar.ejs') -%>
-            <h1 class="question_number unselectable">
-              Game Finished, Wait for Leaderboards to be updated
+            <h1 class="question_number unselectable"
+              style="text-align: center; font-size: 3em; text-shadow:1px 2px black;">
+              Congratulations on Finishing the Game! <br> Leaderboards will be uploaded soon
             </h1>
         </header>
         <% } %>

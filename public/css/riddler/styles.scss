@@ -84,7 +84,10 @@ header nav {
   margin-bottom: 2rem;
 }
 #rulebook .section-container .content-overview .rule {
-  font-family: var(--fs-josef-400);
+  font-family: var(--fs-poppins-200);
+  line-height: 1.6;
+  letter-spacing: 1px;
+  word-spacing: 4px;
   color: white;
   margin: 1rem 0;
 }
@@ -177,7 +180,8 @@ h1.question_number {
 }
 @media (max-width: 625px) {
   header.questions nav {
-    position: sticky;
+    position: absolute;
+    top: 0;
   }
   h1.question_number {
     font-size: 2em;
@@ -199,5 +203,47 @@ h1.question_number {
   }
   .question .flex-grid .hint {
     width: 90%;
+  }
+}
+#status_emoji {
+  max-width: 68px;
+  height: auto;
+}
+.shake-animation {
+  animation: shake 1s ease-out;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
   }
 }

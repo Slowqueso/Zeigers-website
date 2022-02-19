@@ -31,6 +31,29 @@ router.post(
     }
   })
 );
+//@desc Get Riddler Responses
+//@route GET /api/riddler
+//@access Public
+router.get(
+  "/riddler",
+  asyncHandler(async (req, res) => {
+    try {
+      const riddlerResponse = await Riddler.find(
+        {},
+        "user.name user.email totalPoints"
+      );
+      if (riddlerResponse) {
+        const topUsers = riddlerResponse.sort(function (a, b) {
+          return b.totalPoints - a.totalPoints;
+        });
+        res.status(201).json(topUsers);
+      }
+    } catch (err) {
+      res.status(400);
+      console.log(err);
+    }
+  })
+);
 
 //@desc Submit Input
 //@route PUT /api/riddler/
@@ -48,7 +71,7 @@ router.put(
       if (responseObject.progress <= QuestionObject.length) {
         const answerValidation = QuestionObject[question_number - 1].answer;
         let points = 0;
-        if (answer.toLowerCase() === answerValidation) {
+        if (answer.toLowerCase().replace(/ /g, "") === answerValidation) {
           const question = responseObject.questions[question_number - 1];
           const hints = question.hint;
           // If hint status if true then -2
@@ -66,21 +89,24 @@ router.put(
               points: 10 + points,
             },
           });
+          responseObject.progress = responseObject.progress + 1; //updating progress
           responseObject.totalPoints =
             responseObject.totalPoints + (10 + points);
+          res.status(201).json({ status: false, msg: null });
         } else {
-          responseObject.answers.push({
-            question: {
-              question_number,
-              input: answer,
-              points: 0,
-            },
-          });
+          // responseObject.answers.push({
+          //   question: {
+          //     question_number,
+          //     input: answer,
+          //     points: 0,
+          //   },
+          // });
           responseObject.totalPoints = responseObject.totalPoints;
+          res
+            .status(201)
+            .json({ status: true, msg: "Wrong Answer! Try Again." });
         }
-        responseObject.progress = responseObject.progress + 1; //updating progress
         const updatedAnswer = await responseObject.save();
-        res.status(201).json(updatedAnswer);
       } else {
         res.json("Game Completed");
       }
@@ -90,7 +116,16 @@ router.put(
     }
   })
 );
-
+router.post("/getScore", async (req, res) => {
+  const { phone_number } = req.body;
+  try {
+    const resp = await Riddler.findOne({ "user.phone": phone_number });
+    res.json(resp);
+  } catch (err) {
+    console.log(err);
+    res.status(400).send(err);
+  }
+});
 router.put(
   "/saveProgress",
   checkUser,

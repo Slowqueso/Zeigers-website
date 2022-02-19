@@ -54,6 +54,7 @@ if (question) {
   };
   loadProgress();
 }
+const status_emoji = document.querySelector("#status_emoji");
 if (question) {
   question.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -67,8 +68,24 @@ if (question) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      if (res) {
-        document.location.reload();
+      const data1 = await res.json();
+
+      if (!data1.status) {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        setTimeout(() => {
+          document.location.reload();
+        }, 700);
+      } else {
+        if (status_emoji) {
+          status_emoji.src = "/Assets/svgs/sad_emoji.svg";
+          document.body.scrollTop = 0; // For Safari
+          status_emoji.style.animation = "shake 1s ease-out";
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+          setTimeout(() => {
+            status_emoji.style.animation = "none";
+          }, 1000);
+        }
       }
     } catch (err) {
       console.log(err);
