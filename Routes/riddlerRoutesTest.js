@@ -82,16 +82,36 @@ router.put(
               points = points + 0;
             }
           }
-          responseObject.answers.push({
+          // responseObject.answers.push({
+          // question: {
+          //   question_number,
+          //   input: answer,
+          //   points: 10 + points,
+          // },
+          // });
+          responseObject.answers[question_number - 1] = {
             question: {
               question_number,
               input: answer,
               points: 10 + points,
             },
+          };
+          const toBeUpdatedProgress =
+            responseObject.answers[responseObject.answers.length - 1].question
+              .question_number + 1;
+          console.log(toBeUpdatedProgress);
+          if (toBeUpdatedProgress < QuestionObject.length) {
+            responseObject.progress = toBeUpdatedProgress;
+          } else {
+            responseObject.progress = QuestionObject.length + 1; //updating progress
+          }
+          // responseObject.totalPoints =
+          //   responseObject.totalPoints + (10 + points);
+          let totalPoints = 0;
+          responseObject.answers.forEach((answer) => {
+            totalPoints += answer.question.points;
           });
-          responseObject.progress = responseObject.progress + 1; //updating progress
-          responseObject.totalPoints =
-            responseObject.totalPoints + (10 + points);
+          responseObject.totalPoints = totalPoints;
           res.status(201).json({ status: false, msg: null });
         } else {
           // responseObject.answers.push({
