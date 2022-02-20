@@ -103,7 +103,7 @@ router.put(
           // });
           responseObject.totalPoints = responseObject.totalPoints;
           res
-            .status(201)
+            .status(500)
             .json({ status: true, msg: "Wrong Answer! Try Again." });
         }
         const updatedAnswer = await responseObject.save();
@@ -116,6 +116,31 @@ router.put(
     }
   })
 );
+router.put(
+  "/decrementProgress",
+  checkUser,
+  asyncHandler(async (req, res) => {
+    const { _id } = res.locals.user;
+    const responseObject = await Riddler.findOne({ "user._id": _id });
+    if (responseObject) {
+      const scoreInPreviousQuestion =
+        responseObject.answers[responseObject.answers.length - 1].question
+          .points;
+      let totalPoints = responseObject.totalPoints - scoreInPreviousQuestion;
+      responseObject.progress = responseObject.progress - 1;
+      responseObject.questions.pop();
+      responseObject.answers.pop();
+      responseObject.totalPoints = totalPoints;
+      console.log(responseObject.questions);
+      console.log(responseObject.answers);
+      const updatedObject = await responseObject.save();
+      res.status(200).json(updatedObject);
+    } else {
+      res.status(400).send("Not Found ");
+    }
+  })
+);
+
 router.post("/getScore", async (req, res) => {
   const { phone_number } = req.body;
   try {

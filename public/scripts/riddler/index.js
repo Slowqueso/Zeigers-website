@@ -63,6 +63,7 @@ if (question) {
         question_number: parseInt(question.getAttribute("question_number")),
         answer: answer.value,
       };
+      console.log(JSON.stringify(data));
       const res = await fetch("/api/responseSubmit", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -88,7 +89,13 @@ if (question) {
         }
       }
     } catch (err) {
-      console.log(err);
+      const res = await fetch("/api/decrementProgress", {
+        method: "PUT",
+      });
+      const data = await res.json();
+      if (data) {
+        document.location.reload();
+      }
     }
   });
 }
