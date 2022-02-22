@@ -141,34 +141,6 @@ async function loadLeaderboard() {
     console.log(err);
   }
   
-  
-  // data1 = [
-  //   {
-  //       "_id": "62126e843ed8058d97d7a17f",
-  //       "user": {
-  //           "email": "nadarsachin@yahoo.in",
-  //           "name": "Sachin Nadar"
-  //       },
-  //       "totalPoints": 110
-  //   },
-  //   {
-  //       "_id": "62127e1d3ed8058d97d7cc5a",
-  //       "user": {
-  //           "email": "mihirbhatkar2@gmail.com",
-  //           "name": "mihir"
-  //       },
-  //       "totalPoints": 110
-  //   },
-  //   {
-  //       "_id": "621288333ed8058d97d7d3d7",
-  //       "user": {
-  //           "email": "nadaramirthavarshini@gmail.com",
-  //           "name": "Amirthavarshini"
-  //       },
-  //       "totalPoints": 110
-  //   }]
-
-  // var mydata = JSON.parse(data1);
 
   var $table = "<table id='resultTable'><tr><td>Rank</td><td>User</td><td>Email</td><td>Score</td></tr>";
 var rank = 1;
@@ -188,7 +160,7 @@ var rank = 1;
     rank = rank + 1;
     
   }
-  
+
   $table += "</table>";
   $('#leaderboard-div').append($table);
 }
