@@ -155,7 +155,7 @@ var rank = 1;
     $table += "<td>" + it.user.email + "</td>";
     $table += "<td>" + it.totalPoints + "</td>";
     
-    //alert(items[i].duration);
+   
     $table += "</tr>";
     rank = rank + 1;
     
