@@ -47,6 +47,18 @@ const QuestionObject = [
     question_number: 12,
     answer: "dogecoin",
   },
+  {
+    question_number: 13,
+    answer: "fintech",
+  },
+  {
+    question_number: 14,
+    answer: "volkswagen",
+  },
+  {
+    question_number: 15,
+    answer: "nightingale",
+  },
 ];
 
 export default QuestionObject;

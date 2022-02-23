@@ -82,13 +82,6 @@ router.put(
               points = points + 0;
             }
           }
-          // responseObject.answers.push({
-          // question: {
-          //   question_number,
-          //   input: answer,
-          //   points: 10 + points,
-          // },
-          // });
           responseObject.answers[question_number - 1] = {
             question: {
               question_number,
@@ -100,7 +93,7 @@ router.put(
             responseObject.answers[responseObject.answers.length - 1].question
               .question_number + 1;
           console.log(toBeUpdatedProgress);
-          if (toBeUpdatedProgress < QuestionObject.length) {
+          if (toBeUpdatedProgress <= QuestionObject.length) {
             responseObject.progress = toBeUpdatedProgress;
           } else {
             responseObject.progress = QuestionObject.length + 1; //updating progress

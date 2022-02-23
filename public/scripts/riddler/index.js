@@ -129,23 +129,20 @@ hints.forEach((hint) => {
 });
 
 async function loadLeaderboard() {
-
   var data1;
   try {
-    const res = await fetch('/api/riddler', { 
-      method: 'GET', 
+    const res = await fetch("/api/riddler", {
+      method: "GET",
     });
     data1 = await res.json();
-  }
-  catch (err) {
+  } catch (err) {
     console.log(err);
   }
-  
 
-  var $table = "<table id='resultTable'><tr><td>Rank</td><td>User</td><td>Email</td><td>Score</td></tr>";
-var rank = 1;
+  var $table =
+    "<table id='resultTable'><tr><td>Rank</td><td>Username</td><td>Email</td><td>Score</td></tr>";
+  var rank = 1;
   for (var i = 0; i < data1.length; i++) {
-    
     $table += "<tr>";
 
     var it = data1[i];
@@ -154,14 +151,12 @@ var rank = 1;
     $table += "<td>" + it.user.name + "</td>";
     $table += "<td>" + it.user.email + "</td>";
     $table += "<td>" + it.totalPoints + "</td>";
-    
-   
+
     $table += "</tr>";
     rank = rank + 1;
-    
   }
 
   $table += "</table>";
-  $('#leaderboard-div').append($table);
+  $("#leaderboard-div").append($table);
 }
-loadLeaderboard()
+loadLeaderboard();
